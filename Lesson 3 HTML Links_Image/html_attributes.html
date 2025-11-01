@@ -1,0 +1,63 @@
+<h1>HTML LINKS</h1>
+<!-- HTML LINKS ---- ANCHOR ELEMENT -->
+<!--
+anchor element is used to link to another website or web page.
+href="https://www.youtube.com/" is an HTML attribute that defines the link destination.
+target attribute defines where to open the linked document:
+  _self  - Default. Opens in the same window/tab.
+  _blank - Opens in a new window or tab.
+  _parent - Opens in the parent frame.
+  _top - Opens in the full body of the window.
+-->
+<a href="https://www.youtube.com/" target="_blank">Link to YouTube</a>
+<hr>
+
+<h1> Absolute URLs vs. Relative URLs</h1>
+<!--
+Both examples below demonstrate how to use absolute and relative URLs in links.
+The href attribute in the <a> tag specifies the destination address.
+- Absolute URL: Contains the full web address (including https://www...).
+  Used for linking to external websites.
+- Relative URL: Refers to a file or page within the same website.
+  Does not include the domain name.
+-->
+
+<h2>Absolute URLs</h2>
+<!-- Full web addresses used to link to external sites -->
+<p><a href="https://www.youtube.com/">Youtube</a></p>
+<p><a href="https://www.google.com/">Google</a></p>
+
+<h2>Relative URLs</h2>
+<!-- Links that point to pages or resources within the same website -->
+<p><a href="html_images.asp">HTML Images</a></p>
+<p><a href="/css/default.asp">CSS Tutorial</a></p>
+<hr>
+
+
+<h1>HTML Link Titles</h1>
+<!-- The title attribute adds extra information about the link.
+When you hover over the link, the title text appears as a tooltip. -->
+<p><a href="https://www.google.com" title="Go to Google Homepage">Visit Google</a></p>
+
+<hr>
+
+<h1>HTML Button as a Link</h1>
+<!-- You can use a button element with JavaScript or an anchor tag styled as a button to act as a link. -->
+<button onclick="document.location='https://www.w3schools.com'">Go to W3Schools</button>
+
+<hr>
+
+<h1>HTML Links - Use an Image as a Link</h1>
+<!-- You can turn an image into a clickable link using the <a> tag around the <img> tag. -->
+<a href="https://www.w3schools.com">
+  <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools" style="width:150px;height:80px;">
+</a>
+
+<hr>
+<br>
+
+Use the <a> element to define a link
+Use the href attribute to define the link address
+Use the target attribute to define where to open the linked document
+Use the <img> element (inside <a>) to use an image as a link
+Use the mailto: scheme inside the href attribute to create a link that opens the user's email program -->
