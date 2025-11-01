@@ -1,0 +1,60 @@
+HTML Style Best Practices
+
+1. Declare Document Type:
+Always start with <!DOCTYPE html> to define the HTML5 standard.
+
+2. Use Lowercase for Elements and Attributes:
+Stick to lowercase for all element and attribute names for readability, consistency, and ease of maintenance.
+
+3. Close All Elements:
+Even if optional, always close tags (e.g., <p></p>) to avoid rendering and browser inconsistencies.
+
+4. Quote Attribute Values:
+Always enclose attribute values in quotes — required if values contain spaces.
+
+5. Use alt, width, and height for Images:
+Include alt for accessibility and width/height to prevent layout shifts.
+
+6. Maintain Clean Syntax:
+No unnecessary spaces around = in attributes (e.g., href="style.css").
+Keep code lines short — avoid horizontal scrolling.
+
+7. Proper Indentation & Spacing:
+Use two spaces, not tabs. Add blank lines between logical sections for readability.
+
+8. Always Include <title>:
+Required for SEO, browser tab labels, and bookmarks. Keep it descriptive and relevant.
+
+9. Include <html>, <head>, and <body> Tags:
+While optional, omitting them can cause browser or software issues. Always include for stability.
+
+10. Close Empty Elements if Needed:
+Optional in HTML (<meta>), but add / if XML compatibility is required.
+
+11. Specify Language and Encoding:
+Use <html lang="en-us"> and <meta charset="UTF-8"> for accessibility and proper character rendering.
+
+12. Set the Viewport:
+Include <meta name="viewport" content="width=device-width, initial-scale=1.0"> for responsive design.
+
+13. Comment Cleanly:
+Short comments on one line, long comments indented and multi-line for visibility.
+
+14. Use External Stylesheets:
+Link with <link rel="stylesheet" href="styles.css">.
+Keep CSS formatted — braces aligned, properties indented, semicolons after every rule.
+
+15. Load JavaScript Simply:
+Use <script src="myscript.js"></script> — omit type="text/javascript".
+
+16. Respect Case Sensitivity in File Names:
+Use lowercase file names (index.html, style.css, etc.) to prevent server conflicts.
+
+17. File Extensions:
+HTML → .html (or .htm)
+CSS → .css
+JavaScript → .js
+
+18. Default Filenames:
+Use index.html as the homepage file to align with server defaults.
+

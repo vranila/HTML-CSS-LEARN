@@ -221,12 +221,180 @@
 
 <hr>
 
-<h2>9. Exercise</h2>
 
-<p><b>Question:</b> Which CSS layout method is best suited for building a two-dimensional layout?</p>
 
-<ol type="A">
-  <li>CSS Float</li>
-  <li>CSS Flexbox</li>
-  <li>CSS Grid</li>
-</ol>
+<h1>HTML Responsive Web Design</h1>
+
+<p>Responsive Web Design (RWD) ensures web pages look good on all devices—desktops, tablets, and mobile phones. It adapts the layout automatically to different screen sizes and viewports.</p>
+
+<hr>
+
+<h2>1. What is Responsive Web Design?</h2>
+<p>Responsive Web Design uses HTML and CSS to resize, hide, shrink, or enlarge content dynamically. The goal is to deliver a seamless user experience across all devices and screen resolutions.</p>
+
+<hr>
+
+<h2>2. Setting the Viewport</h2>
+<p>To make a website responsive, include the following <code>&lt;meta&gt;</code> tag inside the <code>&lt;head&gt;</code> section of every page:</p>
+
+<pre>
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</pre>
+
+<p>This tag instructs browsers on how to control the page’s dimensions and scaling.</p>
+
+<hr>
+
+<h2>3. Responsive Images</h2>
+<p>Images should adjust their size according to the screen width. This prevents overflow and maintains visual balance.</p>
+
+<h3>Using the <code>width</code> Property</h3>
+<pre>
+&lt;img src="img_girl.jpg" style="width:100%;"&gt;
+</pre>
+<p>This makes the image stretch and shrink with the browser width. However, it can enlarge the image beyond its natural size, causing distortion.</p>
+
+<h3>Using the <code>max-width</code> Property</h3>
+<pre>
+&lt;img src="img_girl.jpg" style="max-width:100%; height:auto;"&gt;
+</pre>
+<p>This ensures the image scales down to fit smaller screens but never grows beyond its original dimensions.</p>
+
+<hr>
+
+<h2>4. Displaying Different Images for Different Screen Sizes</h2>
+<p>The <code>&lt;picture&gt;</code> element allows you to serve specific images depending on the browser’s width.</p>
+
+<pre>
+&lt;picture&gt;
+  &lt;source srcset="img_smallflower.jpg" media="(max-width: 600px)"&gt;
+  &lt;source srcset="img_flowers.jpg" media="(max-width: 1500px)"&gt;
+  &lt;source srcset="flowers.jpg"&gt;
+  &lt;img src="img_smallflower.jpg" alt="Flowers"&gt;
+&lt;/picture&gt;
+</pre>
+
+<hr>
+
+<h2>5. Responsive Text Size</h2>
+<p>You can use viewport width units (<code>vw</code>) to make text resize based on the browser window.</p>
+
+<pre>
+&lt;h1 style="font-size:10vw"&gt;Hello World&lt;/h1&gt;
+</pre>
+<p>1vw equals 1% of the viewport width. If the browser width is 1000px, then 10vw equals 100px.</p>
+
+<hr>
+
+<h2>6. Media Queries</h2>
+<p>Media queries are a cornerstone of responsive design. They allow developers to apply different CSS styles based on screen width or device characteristics.</p>
+
+<p>Example: Below, three columns display side-by-side on large screens and stack vertically on smaller devices.</p>
+
+<pre>
+&lt;style&gt;
+.left, .right {
+  float: left;
+  width: 20%;
+}
+.main {
+  float: left;
+  width: 60%;
+}
+
+/* Responsive Breakpoint */
+@media screen and (max-width: 800px) {
+  .left, .main, .right {
+    width: 100%;
+  }
+}
+&lt;/style&gt;
+
+&lt;div class="left"&gt;Left Menu&lt;/div&gt;
+&lt;div class="main"&gt;Main Content&lt;/div&gt;
+&lt;div class="right"&gt;Right Content&lt;/div&gt;
+</pre>
+
+<hr>
+
+<h2>7. Full Responsive Web Page Example</h2>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;style&gt;
+    * {box-sizing: border-box;}
+    header, footer {background-color: #f1f1f1; text-align: center; padding: 20px;}
+    nav {background: #333; color: white; padding: 15px;}
+    nav a {color: white; margin: 10px; text-decoration: none;}
+    .row {display: flex; flex-wrap: wrap;}
+    .main {flex: 70%; padding: 20px;}
+    .side {flex: 30%; padding: 20px; background-color: #f9f9f9;}
+    @media (max-width: 800px) {
+      .main, .side {flex: 100%;}
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;header&gt;&lt;h2&gt;Responsive Layout Example&lt;/h2&gt;&lt;/header&gt;
+
+&lt;nav&gt;
+  &lt;a href="#"&gt;Home&lt;/a&gt;
+  &lt;a href="#"&gt;About&lt;/a&gt;
+  &lt;a href="#"&gt;Contact&lt;/a&gt;
+&lt;/nav&gt;
+
+&lt;div class="row"&gt;
+  &lt;div class="main"&gt;&lt;h3&gt;Main Content&lt;/h3&gt;&lt;p&gt;This area adjusts based on device size.&lt;/p&gt;&lt;/div&gt;
+  &lt;div class="side"&gt;&lt;h3&gt;Sidebar&lt;/h3&gt;&lt;p&gt;Additional info goes here.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;footer&gt;&lt;p&gt;© 2025 Responsive Web Design&lt;/p&gt;&lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<hr>
+
+<h2>8. Responsive Web Design Frameworks</h2>
+
+<p>Most modern CSS frameworks come with built-in responsive design support, helping you create adaptive layouts with minimal effort.</p>
+
+<table border="1" cellpadding="8" style="border-collapse: collapse; width: 100%; text-align: left;">
+  <tr>
+    <th>Framework</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><b>W3.CSS</b></td>
+    <td>A lightweight, fast, and mobile-first framework designed without dependencies on JavaScript libraries. Automatically responsive for all screen sizes.</td>
+  </tr>
+  <tr>
+    <td><b>Bootstrap</b></td>
+    <td>The most popular responsive CSS framework, offering pre-defined grid systems and responsive utility classes.</td>
+  </tr>
+  <tr>
+    <td><b>Tailwind CSS</b></td>
+    <td>A utility-first framework that enables fine-grained control over responsive layouts using classes like <code>md:</code>, <code>lg:</code>, and <code>xl:</code>.</td>
+  </tr>
+</table>
+
+<hr>
+
+<h2>9. Chapter Summary</h2>
+<ul>
+  <li>Responsive Design ensures compatibility across all devices.</li>
+  <li>Always include the <code>&lt;meta name="viewport"&gt;</code> tag.</li>
+  <li>Use <code>max-width: 100%;</code> for responsive images.</li>
+  <li>Apply <code>vw</code> units for scalable text.</li>
+  <li>Use <b>media queries</b> to change layouts dynamically.</li>
+  <li>Frameworks like W3.CSS, Bootstrap, and Tailwind simplify responsive design.</li>
+</ul>
+
+<hr>
+
+

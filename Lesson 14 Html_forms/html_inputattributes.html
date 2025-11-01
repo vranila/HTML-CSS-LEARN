@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Input Attributes and Form* Attributes</title>
+</head>
+<body>
+
+<h1>HTML Input Attributes</h1>
+<p>Input attributes control how users interact with fields and how data behaves within forms. They define validation, default values, limits, and relationships between inputs and forms.</p>
+
+<hr>
+
+<h2>1. The value Attribute</h2>
+<!-- Sets the default value for an input field -->
+<form>
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname" value="John"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname" value="Doe">
+</form>
+
+<hr>
+
+<h2>2. The readonly Attribute</h2>
+<!-- Makes the field non-editable but still submittable -->
+<form>
+  <label for="country">Country:</label>
+  <input type="text" id="country" name="country" value="India" readonly>
+</form>
+
+<hr>
+
+<h2>3. The disabled Attribute</h2>
+<!-- Disables the input (cannot be used or submitted) -->
+<form>
+  <label for="email">Email:</label>
+  <input type="email" id="email" value="john@example.com" disabled>
+</form>
+
+<hr>
+
+<h2>4. The size Attribute</h2>
+<!-- Sets visible width of the input (in characters) -->
+<form>
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" size="40">
+</form>
+
+<hr>
+
+<h2>5. The maxlength Attribute</h2>
+<!-- Restricts maximum number of characters -->
+<form>
+  <label for="pin">PIN Code:</label>
+  <input type="text" id="pin" name="pin" maxlength="6">
+</form>
+
+<hr>
+
+<h2>6. The min and max Attributes</h2>
+<!-- Define a numeric range -->
+<form>
+  <label for="quantity">Quantity (1–10):</label>
+  <input type="number" id="quantity" name="quantity" min="1" max="10">
+</form>
+
+<hr>
+
+<h2>7. The multiple Attribute</h2>
+<!-- Allows multiple file uploads -->
+<form>
+  <label for="files">Upload Files:</label>
+  <input type="file" id="files" name="files" multiple>
+</form>
+
+<hr>
+
+<h2>8. The pattern Attribute</h2>
+<!-- Enforces input format using regex -->
+<form>
+  <label for="countryCode">Country Code (e.g., +91):</label>
+  <input type="text" id="countryCode" name="countryCode" pattern="\+\d{2}" placeholder="+91">
+</form>
+
+<hr>
+
+<h2>9. The placeholder Attribute</h2>
+<!-- Displays hint text -->
+<form>
+  <label for="email2">Email:</label>
+  <input type="email" id="email2" name="email2" placeholder="Enter your email">
+</form>
+
+<hr>
+
+<h2>10. The required Attribute</h2>
+<!-- Makes field mandatory -->
+<form>
+  <label for="fname2">First name:</label>
+  <input type="text" id="fname2" name="fname2" required>
+  <input type="submit" value="Submit">
+</form>
+
+<hr>
+
+<h2>11. The step Attribute</h2>
+<!-- Sets valid increments for numbers -->
+<form>
+  <label for="points">Points (step of 5):</label>
+  <input type="number" id="points" name="points" step="5">
+</form>
+
+<hr>
+
+<h2>12. The autofocus Attribute</h2>
+<!-- Focuses on this field automatically -->
+<form>
+  <label for="user">Username:</label>
+  <input type="text" id="user" name="user" autofocus>
+</form>
+
+<hr>
+
+<h2>13. The autocomplete Attribute</h2>
+<!-- Controls browser autofill -->
+<form autocomplete="on">
+  <label for="email3">Email:</label>
+  <input type="email" id="email3" name="email3"><br><br>
+  <label for="pwd">Password:</label>
+  <input type="password" id="pwd" name="pwd" autocomplete="off">
+</form>
+
+<hr>
+
+<h2>14. The list Attribute</h2>
+<!-- Provides predefined values via datalist -->
+<form>
+  <label for="browser">Choose a browser:</label>
+  <input list="browsers" id="browser" name="browser">
+  <datalist id="browsers">
+    <option value="Chrome">
+    <option value="Firefox">
+    <option value="Edge">
+    <option value="Safari">
+    <option value="Opera">
+  </datalist>
+</form>
+
+<hr>
+
+<h2>15. The name Attribute</h2>
+<!-- The key used for submitting data -->
+<form action="/action_page.php">
+  <label for="fname3">First name:</label>
+  <input type="text" id="fname3" name="fname3"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<hr>
+
+<h1>HTML Input Form* Attributes</h1>
+<p>Form attributes (form*) allow input elements to override form-wide settings such as submission method, encoding, target, and validation behavior.</p>
+
+<hr>
+
+<h2>1. The form Attribute</h2>
+<!-- Links an input to a form even if it's outside -->
+<form action="/action_page.php" id="form1">
+  <label for="fname4">First name:</label>
+  <input type="text" id="fname4" name="fname"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<label for="lname4">Last name:</label>
+<input type="text" id="lname4" name="lname" form="form1">
+
+<hr>
+
+<h2>2. The formaction Attribute</h2>
+<!-- Overrides the form's action URL -->
+<form action="/action_page.php">
+  <label for="fname5">First name:</label>
+  <input type="text" id="fname5" name="fname"><br><br>
+  <label for="lname5">Last name:</label>
+  <input type="text" id="lname5" name="lname"><br><br>
+  <input type="submit" value="Submit">
+  <input type="submit" formaction="/action_page2.php" value="Submit as Admin">
+</form>
+
+<hr>
+
+<h2>3. The formenctype Attribute</h2>
+<!-- Controls how data is encoded (POST only) -->
+<form action="/action_page_binary.asp" method="post">
+  <label for="fname6">First name:</label>
+  <input type="text" id="fname6" name="fname"><br><br>
+  <input type="submit" value="Submit">
+  <input type="submit" formenctype="multipart/form-data" value="Submit as Multipart/form-data">
+</form>
+
+<hr>
+
+<h2>4. The formmethod Attribute</h2>
+<!-- Overrides form's HTTP method -->
+<form action="/action_page.php" method="get">
+  <label for="fname7">First name:</label>
+  <input type="text" id="fname7" name="fname"><br><br>
+  <label for="lname7">Last name:</label>
+  <input type="text" id="lname7" name="lname"><br><br>
+  <input type="submit" value="Submit using GET">
+  <input type="submit" formmethod="post" value="Submit using POST">
+</form>
+
+<hr>
+
+<h2>5. The formtarget Attribute</h2>
+<!-- Defines where to open submission results -->
+<form action="/action_page.php">
+  <label for="fname8">First name:</label>
+  <input type="text" id="fname8" name="fname"><br><br>
+  <label for="lname8">Last name:</label>
+  <input type="text" id="lname8" name="lname"><br><br>
+  <input type="submit" value="Submit">
+  <input type="submit" formtarget="_blank" value="Submit to New Tab">
+</form>
+
+<hr>
+
+<h2>6. The formnovalidate Attribute</h2>
+<!-- Disables validation for a specific submit button -->
+<form action="/action_page.php">
+  <label for="email4">Enter your email:</label>
+  <input type="email" id="email4" name="email"><br><br>
+  <input type="submit" value="Submit">
+  <input type="submit" formnovalidate="formnovalidate" value="Submit without validation">
+</form>
+
+<hr>
+
+<h2>7. The novalidate Attribute</h2>
+<!-- Disables validation for the entire form -->
+<form action="/action_page.php" novalidate>
+  <label for="email5">Enter your email:</label>
+  <input type="email" id="email5" name="email"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<hr>
+
+<h2>Chapter Summary</h2>
+<ul>
+  <li><b>form</b> – Links input to a specific form by ID.</li>
+  <li><b>formaction</b> – Overrides form’s submission URL.</li>
+  <li><b>formenctype</b> – Changes encoding method for POST.</li>
+  <li><b>formmethod</b> – Overrides HTTP method (GET/POST).</li>
+  <li><b>formtarget</b> – Defines where results appear.</li>
+  <li><b>formnovalidate</b> – Skips validation for that button.</li>
+  <li><b>novalidate</b> – Disables validation for the entire form.</li>
+</ul>
+
+<hr>
+
+</body>
+</html>

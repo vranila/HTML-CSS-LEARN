@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Canvas Graphics</title>
+</head>
+<body>
+
+<h1>HTML Canvas Graphics</h1>
+
+<p>The HTML <code>&lt;canvas&gt;</code> element is used to draw graphics on a web page using JavaScript. 
+It acts as a blank drawing surface that can display shapes, text, gradients, and images dynamically.</p>
+
+<hr>
+
+<h2>What is HTML Canvas?</h2>
+<p>The <code>&lt;canvas&gt;</code> element is only a container — JavaScript actually performs the drawing operations.</p>
+
+<ul>
+  <li>Canvas supports paths, rectangles, circles, text, and images.</li>
+  <li>All major browsers support the <code>&lt;canvas&gt;</code> element.</li>
+</ul>
+
+<hr>
+
+<h2>Canvas Example</h2>
+<!-- A simple canvas with defined width, height, and border -->
+<canvas id="myCanvas" width="400" height="200" style="border:1px solid #000000;">
+</canvas>
+
+<p><b>Note:</b> Always specify the <code>id</code>, <code>width</code>, and <code>height</code> attributes. 
+Use CSS <code>border</code> for visible edges.</p>
+
+<hr>
+
+<h2>1. Draw a Line</h2>
+<!-- Draws a diagonal line -->
+<script>
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d"); // Get 2D drawing context
+  ctx.moveTo(0, 0);             // Start at top-left corner
+  ctx.lineTo(200, 100);         // Draw to bottom-right
+  ctx.stroke();                 // Render the line
+</script>
+
+<p><b>Explanation:</b> 
+<code>moveTo()</code> sets the starting point, <code>lineTo()</code> sets the end point, 
+and <code>stroke()</code> draws the line on the canvas.</p>
+
+<hr>
+
+<h2>2. Draw a Circle</h2>
+<!-- Draws a circular outline -->
+<script>
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  ctx.beginPath();              // Start a new path
+  ctx.arc(95, 50, 40, 0, 2 * Math.PI); // x=95, y=50, radius=40
+  ctx.stroke();                 // Draw the circle border
+</script>
+
+<p><b>Explanation:</b> 
+<code>arc(x, y, r, startAngle, endAngle)</code> creates a circle path. 
+<code>beginPath()</code> ensures it doesn't connect to previous drawings.</p>
+
+<hr>
+
+<h2>3. Draw Filled Text</h2>
+<!-- Fills text using the current fillStyle -->
+<script>
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  ctx.font = "30px Arial";          // Set font and size
+  ctx.fillText("Hello World", 10, 50); // Draw filled text
+</script>
+
+<p><b>Explanation:</b> 
+<code>fillText()</code> renders filled text with the current <code>fillStyle</code> color.</p>
+
+<hr>
+
+<h2>4. Draw Stroke Text</h2>
+<!-- Outlines text instead of filling it -->
+<script>
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  ctx.font = "30px Arial";
+  ctx.strokeText("Hello Canvas", 10, 100); // Outline text
+</script>
+
+<p><b>Explanation:</b> 
+<code>strokeText()</code> draws only the border of the text, unlike <code>fillText()</code>.</p>
+
+<hr>
+
+<h2>5. Draw Linear Gradient</h2>
+<!-- Draws a horizontal color gradient -->
+<script>
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+
+  // Create a left-to-right gradient
+  var grd = ctx.createLinearGradient(0, 0, 200, 0);
+  grd.addColorStop(0, "red");     // Start color
+  grd.addColorStop(1, "white");   // End color
+
+  ctx.fillStyle = grd;            // Apply gradient as fill style
+  ctx.fillRect(10, 120, 150, 50); // Draw a filled rectangle
+</script>
+
+<p><b>Explanation:</b> 
+<code>createLinearGradient()</code> creates a smooth transition between two colors.
+<code>addColorStop()</code> defines where each color appears.</p>
+
+<hr>
+
+<h2>6. Draw Radial (Circular) Gradient</h2>
+<!-- Draws a circular gradient -->
+<script>
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+
+  // Create a circular gradient
+  var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+  grd.addColorStop(0, "blue");
+  grd.addColorStop(1, "white");
+
+  ctx.fillStyle = grd;
+  ctx.fillRect(180, 20, 150, 80);
+</script>
+
+<p><b>Explanation:</b> 
+<code>createRadialGradient()</code> defines a circular color transition from an inner to outer radius.</p>
+
+<hr>
+
+<h2>7. Draw Image</h2>
+<!-- Loads and draws an image onto the canvas -->
+<!-- Image element used for drawing -->
+<img id="scream" src="https://www.w3schools.com/html/img_the_scream.jpg" alt="The Scream" width="220" height="277" style="display:none;">
+
+<canvas id="canvasImage" width="300" height="300" style="border:1px solid #000;"></canvas>
+
+<script>
+  var c = document.getElementById("canvasImage");
+  var ctx = c.getContext("2d");
+  var img = document.getElementById("scream");
+  // Draw image when it has loaded
+  img.onload = function() {
+    ctx.drawImage(img, 10, 10);
+  }
+</script>
+
+<p><b>Explanation:</b> 
+<code>drawImage(image, x, y)</code> places an image at a specified position on the canvas. 
+You can use hidden <code>&lt;img&gt;</code> elements or load images dynamically.</p>
+
+<hr>
+
+<h2>Summary</h2>
+<ul>
+  <li><code>&lt;canvas&gt;</code> creates a drawing area.</li>
+  <li>All drawings use the <code>CanvasRenderingContext2D</code> API.</li>
+  <li><code>stroke()</code> draws outlines; <code>fill()</code> fills areas.</li>
+  <li>Supports gradients, images, shapes, and text rendering.</li>
+  <li>JavaScript is required for all canvas operations.</li>
+</ul>
+
+<hr>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML SVG Graphics</title>
+</head>
+<body>
+
+<h1>HTML SVG Graphics</h1>
+
+<p><b>SVG (Scalable Vector Graphics)</b> defines vector-based graphics using XML.  
+These graphics can be directly embedded inside an HTML page and are resolution-independent.</p>
+
+<hr>
+
+<h2>What is SVG?</h2>
+<ul>
+  <li>SVG stands for <b>Scalable Vector Graphics</b>.</li>
+  <li>It is used to create <b>vector-based</b> graphics for the web.</li>
+  <li>SVG defines graphics in <b>XML format</b>, making them both human- and machine-readable.</li>
+  <li>Every element and attribute can be <b>animated</b> using CSS or JavaScript.</li>
+  <li>SVG is a <b>W3C recommendation</b> and integrates with CSS, DOM, and JS.</li>
+  <li>Supported by all major browsers.</li>
+</ul>
+
+<hr>
+
+<h2>The &lt;svg&gt; Element</h2>
+<p>The <code>&lt;svg&gt;</code> element is a container for SVG shapes such as circles, rectangles, paths, and text.  
+You can control colors, borders, and positions with attributes.</p>
+
+<hr>
+
+<h2>1. SVG Circle</h2>
+
+<!-- Basic SVG Circle Example -->
+<svg width="120" height="120" style="border:1px solid #ccc">
+  <!-- cx and cy define the center, r defines the radius -->
+  <!-- stroke sets the outline color, fill sets the inside color -->
+  <circle cx="60" cy="60" r="40" stroke="green" stroke-width="4" fill="yellow" />
+</svg>
+
+<p><b>Explanation:</b>  
+<code>&lt;circle&gt;</code> draws a circle.  
+Attributes:
+<ul>
+  <li><code>cx</code> – X-coordinate of center</li>
+  <li><code>cy</code> – Y-coordinate of center</li>
+  <li><code>r</code> – radius</li>
+  <li><code>stroke</code> – border color</li>
+  <li><code>stroke-width</code> – border thickness</li>
+  <li><code>fill</code> – inner color</li>
+</ul>
+</p>
+
+<hr>
+
+<h2>2. SVG Rectangle</h2>
+
+<!-- Basic Rectangle Example -->
+<svg width="200" height="120" style="border:1px solid #ccc">
+  <!-- x and y specify position, width and height define size -->
+  <rect x="20" y="20" width="150" height="80" stroke="blue" stroke-width="3" fill="lightblue" />
+</svg>
+
+<p><b>Explanation:</b>  
+<code>&lt;rect&gt;</code> draws a rectangle.  
+Attributes: <code>x</code>, <code>y</code>, <code>width</code>, <code>height</code>, <code>stroke</code>, <code>fill</code>.</p>
+
+<hr>
+
+<h2>3. SVG Ellipse</h2>
+
+<svg width="200" height="120" style="border:1px solid #ccc">
+  <!-- cx, cy define center; rx, ry define radius on X and Y axes -->
+  <ellipse cx="100" cy="60" rx="80" ry="40" stroke="purple" stroke-width="3" fill="pink" />
+</svg>
+
+<p><b>Explanation:</b>  
+<code>&lt;ellipse&gt;</code> is like a circle stretched horizontally or vertically.</p>
+
+<hr>
+
+<h2>4. SVG Line</h2>
+
+<svg width="200" height="100" style="border:1px solid #ccc">
+  <!-- x1, y1 and x2, y2 define start and end points -->
+  <line x1="10" y1="90" x2="190" y2="10" style="stroke:rgb(255,0,0);stroke-width:2" />
+</svg>
+
+<p><b>Explanation:</b>  
+<code>&lt;line&gt;</code> creates a straight line using start (<code>x1</code>, <code>y1</code>) and end (<code>x2</code>, <code>y2</code>) coordinates.</p>
+
+<hr>
+
+<h2>5. SVG Polygon</h2>
+
+<svg width="200" height="120" style="border:1px solid #ccc">
+  <!-- points defines the vertices of the shape -->
+  <polygon points="100,10 40,110 190,110" style="fill:lime;stroke:purple;stroke-width:3" />
+</svg>
+
+<p><b>Explanation:</b>  
+<code>&lt;polygon&gt;</code> connects multiple points to form closed shapes like triangles, pentagons, etc.</p>
+
+<hr>
+
+<h2>6. SVG Polyline</h2>
+
+<svg width="200" height="120" style="border:1px solid #ccc">
+  <!-- Unlike polygon, polyline is open-ended -->
+  <polyline points="0,40 40,20 80,40 120,20 160,40 200,20"
+            style="fill:none;stroke:black;stroke-width:2" />
+</svg>
+
+<p><b>Explanation:</b>  
+<code>&lt;polyline&gt;</code> is similar to <code>&lt;polygon&gt;</code> but doesn’t close the path.</p>
+
+<hr>
+
+<h2>7. SVG Text</h2>
+
+<svg width="300" height="100" style="border:1px solid #ccc">
+  <!-- x and y define text position -->
+  <text x="20" y="60" fill="blue" font-size="30" font-family="Arial">Hello SVG!</text>
+</svg>
+
+<p><b>Explanation:</b>  
+<code>&lt;text&gt;</code> places text inside SVG and supports all font styling.</p>
+
+<hr>
+
+<h2>8. SVG with Gradient Fill</h2>
+
+<svg width="200" height="120" style="border:1px solid #ccc">
+  <!-- Define gradient inside <defs> -->
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:orange;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:white;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Use the gradient as fill -->
+  <rect x="20" y="20" width="150" height="80" fill="url(#grad1)" />
+</svg>
+
+<p><b>Explanation:</b>  
+Gradients in SVG are defined inside <code>&lt;defs&gt;</code> and applied using <code>fill="url(#id)"</code>.</p>
+
+<hr>
+
+<h2>9. SVG Animation Example</h2>
+
+<svg width="200" height="120" style="border:1px solid #ccc">
+  <!-- Simple animation that moves a circle horizontally -->
+  <circle cx="20" cy="60" r="15" fill="red">
+    <animate attributeName="cx" from="20" to="180" dur="3s" repeatCount="indefinite" />
+  </circle>
+</svg>
+
+<p><b>Explanation:</b>  
+<code>&lt;animate&gt;</code> allows SVG elements to move or change attributes over time.</p>
+
+<hr>
+
+<h2>Summary</h2>
+<ul>
+  <li>SVG uses XML syntax to describe 2D graphics.</li>
+  <li>SVG is scalable, lightweight, and supports animation.</li>
+  <li>Common shapes: <code>circle</code>, <code>rect</code>, <code>ellipse</code>, <code>line</code>, <code>polygon</code>, <code>polyline</code>, and <code>text</code>.</li>
+  <li>Fully compatible with CSS and JavaScript.</li>
+</ul>
+
+</body>
+</html>
+
+
+</body>
+</html>

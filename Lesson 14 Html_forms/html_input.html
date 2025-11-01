@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Input Types</title>
+</head>
+<body>
+
+<h1>HTML Input Types</h1>
+
+<p>HTML provides a wide range of <code>&lt;input&gt;</code> types to collect different kinds of user data. Each type defines the format of input the browser should accept.</p>
+
+<hr>
+
+<h2>Examples of Different Input Types</h2>
+
+<form>
+  <!-- 1. Button: Creates a clickable button -->
+  <p><b>Button:</b> <input type="button" value="Click Me"></p>
+
+  <!-- 2. Checkbox: Allows multiple selections -->
+  <p><b>Checkbox:</b><br>
+    <input type="checkbox" id="bike" name="vehicle" value="Bike">
+    <label for="bike">I have a bike</label><br>
+    <input type="checkbox" id="car" name="vehicle" value="Car">
+    <label for="car">I have a car</label>
+  </p>
+
+  <!-- 3. Color: Opens a color picker -->
+  <p><b>Color:</b> <input type="color" name="favcolor"></p>
+
+  <!-- 4. Date: Selects a calendar date -->
+  <p><b>Date:</b> <input type="date" name="birthday"></p>
+
+  <!-- 5. Datetime-local: Selects both date and time (local timezone) -->
+  <p><b>Datetime-local:</b> <input type="datetime-local" name="meeting"></p>
+
+  <!-- 6. Email: Accepts a valid email address -->
+  <p><b>Email:</b> <input type="email" name="email"></p>
+
+  <!-- 7. File: Uploads one or more files -->
+  <p><b>File:</b> <input type="file" name="myfile"></p>
+
+  <!-- 8. Hidden: Invisible field used to store data -->
+  <p><b>Hidden (not visible):</b> <input type="hidden" name="userid" value="12345"></p>
+
+  <!-- 9. Image: Acts as a submit button using an image -->
+  <p><b>Image (as submit button):</b> 
+    <input type="image" src="https://via.placeholder.com/50" alt="Submit" width="50" height="50">
+  </p>
+
+  <!-- 10. Month: Selects a month and year -->
+  <p><b>Month:</b> <input type="month" name="startmonth"></p>
+
+  <!-- 11. Number: Accepts only numeric input -->
+  <p><b>Number:</b> <input type="number" name="quantity" min="1" max="10"></p>
+
+  <!-- 12. Password: Masks entered characters -->
+  <p><b>Password:</b> <input type="password" name="pwd"></p>
+
+  <!-- 13. Radio: Allows single selection from a group -->
+  <p><b>Radio:</b><br>
+    <input type="radio" id="html" name="fav_lang" value="HTML">
+    <label for="html">HTML</label><br>
+    <input type="radio" id="css" name="fav_lang" value="CSS">
+    <label for="css">CSS</label><br>
+    <input type="radio" id="js" name="fav_lang" value="JavaScript">
+    <label for="js">JavaScript</label>
+  </p>
+
+  <!-- 14. Range: Creates a slider -->
+  <p><b>Range:</b> <input type="range" name="vol" min="0" max="100"></p>
+
+  <!-- 15. Reset: Resets form inputs to default -->
+  <p><b>Reset:</b> <input type="reset" value="Reset Form"></p>
+
+  <!-- 16. Search: Optimized for search queries -->
+  <p><b>Search:</b> <input type="search" name="query" placeholder="Search here..."></p>
+
+  <!-- 17. Submit: Sends form data to the server -->
+  <p><b>Submit:</b> <input type="submit" value="Submit"></p>
+
+  <!-- 18. Tel: Accepts phone numbers -->
+  <p><b>Telephone:</b> <input type="tel" name="phone" placeholder="123-456-7890"></p>
+
+  <!-- 19. Text: Default single-line text input -->
+  <p><b>Text:</b> <input type="text" name="firstname" placeholder="Enter your name"></p>
+
+  <!-- 20. Time: Selects a time -->
+  <p><b>Time:</b> <input type="time" name="appt"></p>
+
+  <!-- 21. URL: Accepts a web address -->
+  <p><b>URL:</b> <input type="url" name="homepage" placeholder="https://example.com"></p>
+
+  <!-- 22. Week: Selects a week number of a year -->
+  <p><b>Week:</b> <input type="week" name="week_year"></p>
+
+</form>
+
+<hr>
+
+<!-- Summary section -->
+<h2>Chapter Summary</h2>
+<ul>
+  <li>HTML <code>&lt;input&gt;</code> supports multiple types to collect different data formats.</li>
+  <li>Examples include text, password, email, date, color, and file.</li>
+  <li>Some inputs like <code>range</code> and <code>number</code> provide built-in validation.</li>
+  <li><code>submit</code> and <code>reset</code> handle form submission and clearing.</li>
+</ul>
+
+<hr>
+
+</body>
+</html>
