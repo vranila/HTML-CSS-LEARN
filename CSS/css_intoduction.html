@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Introduction</title>
+
+  <!-- External CSS link (example only, this file can be created separately) -->
+  <!-- <link rel="stylesheet" href="style.css"> -->
+
+  <style>
+    /* ------------------------------
+       Internal CSS Styles (Demo)
+       ------------------------------ */
+
+    /* The body selector applies background and font style to the entire page */
+    body {
+      background-color: lightblue; /* Sets background color */
+      font-family: Verdana, sans-serif; /* Sets the font for the page */
+    }
+
+    /* h1 tag styling */
+    h1 {
+      color: white; /* Text color */
+      text-align: center; /* Centers the heading */
+      background-color: #0066cc; /* Adds contrast background */
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    /* Paragraph styling */
+    p {
+      font-size: 18px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Demo section styles */
+    .example {
+      background-color: #f4f4f4;
+      padding: 15px;
+      border-left: 5px solid #0077cc;
+      margin: 20px 0;
+    }
+
+    /* Links to simulate multiple stylesheets */
+    .stylesheet-links a {
+      margin-right: 10px;
+      text-decoration: none;
+      background: #0077cc;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    .stylesheet-links a:hover {
+      background: #005fa3;
+    }
+ 
+    /* ---------------------------------
+       CSS Syntax Demonstration
+       ---------------------------------
+       Format:
+       selector {
+         property: value;
+       }
+    */
+
+    /* Example rule: all <p> elements will have red text and center alignment */
+    p {
+      color: red;             /* property: sets text color */
+      text-align: center;     /* property: aligns text horizontally */
+    }
+
+    /* Basic formatting for the learning layout */
+    body {
+      font-family: Verdana, sans-serif;
+      background-color: #f4f7fa;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      color: #004d99;
+    }
+
+    .example-box {
+      background: #fff;
+      border-left: 5px solid #007acc;
+      padding: 15px;
+      margin: 15px 0;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    pre {
+      background-color: #272822;
+      color: #f8f8f2;
+      padding: 10px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+
+    .highlight {
+      color: #c7254e;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Introduction</h1>
+
+  <p><b>CSS (Cascading Style Sheets)</b> is the language used to style and design web pages.  
+  It describes how HTML elements should be displayed on screen, on paper, or in other media formats.</p>
+
+  <hr>
+
+  <h2>What is CSS?</h2>
+  <ul>
+    <li>CSS stands for <b>Cascading Style Sheets</b>.</li>
+    <li>It defines how HTML elements are displayed across devices.</li>
+    <li>It allows you to apply consistent design to multiple pages simultaneously.</li>
+    <li>External CSS files (<code>.css</code>) make global styling changes easy.</li>
+  </ul>
+
+  <hr>
+
+  <h2>CSS Demo - One HTML Page, Multiple Styles!</h2>
+
+  <p>Below are links simulating different stylesheet versions applied to the same HTML structure:</p>
+
+  <div class="stylesheet-links">
+    <a href="#">Stylesheet 1</a>
+    <a href="#">Stylesheet 2</a>
+    <a href="#">Stylesheet 3</a>
+    <a href="#">Stylesheet 4</a>
+  </div>
+
+  <p><i>(In a real setup, each link would load a different CSS file using JavaScript or separate HTML files.)</i></p>
+
+  <hr>
+
+  <h2>Why Use CSS?</h2>
+  <p>CSS simplifies web design by controlling layout, color, font, and responsiveness.  
+  It helps deliver a consistent look across devices and allows one central place to modify styles.</p>
+
+  <hr>
+
+  <h2>CSS Example</h2>
+
+  <div class="example">
+    <pre>
+    body {
+    background-color: lightblue;
+    }
+
+    h1 {
+    color: white;
+    text-align: center;
+    }
+
+    p {
+    font-family: verdana;
+    font-size: 20px;
+    }
+    </pre>
+  </div>
+
+  <p><b>Explanation:</b></p>
+  <ul>
+    <li><code>background-color</code> sets the background shade.</li>
+    <li><code>color</code> defines text color.</li>
+    <li><code>text-align</code> adjusts text alignment.</li>
+    <li><code>font-family</code> changes text font style.</li>
+    <li><code>font-size</code> sets text size.</li>
+  </ul>
+
+  <hr>
+
+  <h2>CSS Saves a Lot of Work!</h2>
+  <p>By using external stylesheets, you can manage the entire site’s design from one file.  
+  Updating one CSS file automatically updates all linked web pages.</p>
+
+  <div class="example">
+    <p><b>Example External CSS File: style.css</b></p>
+    <pre>
+/* style.css */
+body {
+  background-color: #e0f7fa;
+}
+
+h1 {
+  color: navy;
+  text-align: left;
+}
+    </pre>
+  </div>
+
+  <p>To link it in HTML:</p>
+  <pre>
+&lt;link rel="stylesheet" href="style.css"&gt;
+  </pre>
+
+  <hr>
+
+
+
+  <h3>Summary</h3>
+  <ul>
+    <li>CSS defines style, color, and layout of web pages.</li>
+    <li>It separates design from structure for cleaner code.</li>
+    <li>External CSS enables easy global updates.</li>
+  </ul>
+
+
+  <h1>CSS Syntax</h1>
+
+  <p><b>CSS (Cascading Style Sheets)</b> is written using a simple syntax that defines how HTML elements should appear on a webpage.</p>
+
+  <hr>
+
+  <h2>Structure of a CSS Rule</h2>
+
+  <p>A CSS rule consists of two main parts:</p>
+  <ul>
+    <li><b>Selector</b> - targets the HTML element(s) you want to style.</li>
+    <li><b>Declaration block</b> - contains one or more style declarations enclosed in curly braces <code>{ }</code>.</li>
+  </ul>
+
+  <div class="example-box">
+    <pre>
+    selector {
+    property: value;
+    property: value;
+    }
+    </pre>
+  </div>
+
+  <p>Each declaration includes a <span class="highlight">CSS property</span> name and a <span class="highlight">value</span>, separated by a colon (<code>:</code>), and declarations are separated by semicolons (<code>;</code>).</p>
+
+  <hr>
+
+  <h2>Example</h2>
+
+  <p>The following rule styles all <code>&lt;p&gt;</code> elements with red color and centered text:</p>
+
+  <div class="example-box">
+    <pre>
+p {
+  color: red;
+  text-align: center;
+}
+    </pre>
+  </div>
+
+  <h3>Example Explained</h3>
+  <ul>
+    <li><code>p</code> - is the <b>selector</b> that points to all paragraph elements.</li>
+    <li><code>color</code> - is a <b>property</b> that changes text color.</li>
+    <li><code>red</code> - is the <b>value</b> assigned to the <code>color</code> property.</li>
+    <li><code>text-align</code> - aligns text horizontally within its element.</li>
+    <li><code>center</code> - is the value making the text centered.</li>
+  </ul>
+
+  <hr>
+
+
+  <h2>Summary</h2>
+  <ul>
+    <li>A CSS rule = Selector + Declaration Block</li>
+    <li>Declaration Block = Property + Value pairs</li>
+    <li>Use <code>;</code> to separate multiple declarations</li>
+    <li>Wrap declarations in <code>{ }</code></li>
+  </ul>
+
+</body>
+</html>
