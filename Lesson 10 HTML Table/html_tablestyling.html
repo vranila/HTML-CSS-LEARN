@@ -1,0 +1,93 @@
+<h1>HTML Table Styling</h1>
+
+<!-- Used to enhance tables using CSS for better readability and visuals -->
+
+<!--  Horizontal Zebra Stripes -->
+<h2>1. HTML Table - Zebra Stripes</h2>
+<!-- :nth-child(even) colors every second row -->
+<table style="width:60%; border-collapse:collapse; border:1px solid black; text-align:center;">
+  <style>
+    table, th, td { border:1px solid black; border-collapse:collapse; padding:10px; }
+    tr:nth-child(even) { background-color:#D6EEEE; }
+  </style>
+  <tr><th>1</th><th>2</th><th>3</th><th>4</th></tr>
+  <tr><td>5</td><td>6</td><td>7</td><td>8</td></tr>
+  <tr><td>9</td><td>10</td><td>11</td><td>12</td></tr>
+  <tr><td>13</td><td>14</td><td>15</td><td>16</td></tr>
+  <tr><td>17</td><td>18</td><td>19</td><td>20</td></tr>
+</table>
+
+<hr>
+
+<!-- Vertical Zebra Stripes -->
+<h2>2. HTML Table - Vertical Zebra Stripes</h2>
+<!-- :nth-child(even) on td/th adds vertical color alternation -->
+<table style="width:60%; border-collapse:collapse; border:1px solid black; text-align:center;">
+  <style>
+    td:nth-child(even), th:nth-child(even) { background-color:#D6EEEE; }
+  </style>
+  <tr><th>1</th><th>2</th><th>3</th><th>4</th></tr>
+  <tr><td>5</td><td>6</td><td>7</td><td>8</td></tr>
+  <tr><td>9</td><td>10</td><td>11</td><td>12</td></tr>
+  <tr><td>13</td><td>14</td><td>15</td><td>16</td></tr>
+  <tr><td>17</td><td>18</td><td>19</td><td>20</td></tr>
+</table>
+
+<hr>
+
+<!--  Combined Horizontal + Vertical Stripes -->
+<h2>3. Combined Zebra Stripes</h2>
+<!-- Both row and column styling with transparent color -->
+<table style="width:60%; border-collapse:collapse; border:1px solid black; text-align:center;">
+  <style>
+    tr:nth-child(even) { background-color: rgba(150,212,212,0.4); }
+    th:nth-child(even), td:nth-child(even) { background-color: rgba(150,212,212,0.4); }
+  </style>
+  <tr><th>1</th><th>2</th><th>3</th><th>4</th></tr>
+  <tr><td>5</td><td>6</td><td>7</td><td>8</td></tr>
+  <tr><td>9</td><td>10</td><td>11</td><td>12</td></tr>
+  <tr><td>13</td><td>14</td><td>15</td><td>16</td></tr>
+  <tr><td>17</td><td>18</td><td>19</td><td>20</td></tr>
+</table>
+
+<hr>
+
+<!-- ✅ Horizontal Dividers -->
+<h2>4. Horizontal Dividers</h2>
+<!-- Adds lines between rows using border-bottom -->
+<table style="width:60%; border-collapse:collapse; text-align:left;">
+  <style>
+    tr { border-bottom:1px solid #ddd; }
+  </style>
+  <tr><th>First Name</th><th>Last Name</th><th>Savings</th></tr>
+  <tr><td>Peter</td><td>Griffin</td><td>$100</td></tr>
+  <tr><td>Lois</td><td>Griffin</td><td>$150</td></tr>
+  <tr><td>Joe</td><td>Swanson</td><td>$300</td></tr>
+</table>
+
+<hr>
+
+<!-- Hoverable Table -->
+<h2>5. Hoverable Table</h2>
+<!-- Highlights row on mouse hover -->
+<table style="width:60%; border-collapse:collapse; text-align:left;">
+  <style>
+    tr:hover { background-color:#D6EEEE; }
+  </style>
+  <tr><th>First Name</th><th>Last Name</th><th>Savings</th></tr>
+  <tr><td>Peter</td><td>Griffin</td><td>$100</td></tr>
+  <tr><td>Lois</td><td>Griffin</td><td>$150</td></tr>
+  <tr><td>Joe</td><td>Swanson</td><td>$300</td></tr>
+</table>
+
+<hr>
+
+<!-- Summary -->
+<h2>Key Styling Concepts</h2>
+<ul>
+  <li><b>:nth-child(even)</b> → Applies alternate row or column styling.</li>
+  <li><b>rgba()</b> → Allows transparent color overlays.</li>
+  <li><b>border-bottom</b> → Creates horizontal dividers.</li>
+  <li><b>:hover</b> → Highlights rows dynamically on hover.</li>
+  <li><b>border-collapse</b> → Removes double borders.</li>
+</ul>

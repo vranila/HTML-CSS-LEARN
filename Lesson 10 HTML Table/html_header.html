@@ -1,0 +1,148 @@
+<h1>HTML Table Headers</h1>
+<!--
+Table headers are defined using the <th> element.
+They make table data more readable and are displayed in bold and centered by default.
+-->
+
+<hr>
+
+<h2>1. Basic Table Header</h2>
+<!-- Each <th> defines a header cell -->
+<table style="width:100%; border-collapse:collapse;" border="1">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+</table>
+
+<hr>
+
+<h2>2. Vertical Table Headers</h2>
+<!-- The first column acts as a header -->
+<table style="width:100%; border-collapse:collapse;" border="1">
+  <tr>
+    <th>Firstname</th>
+    <td>Jill</td>
+    <td>Eve</td>
+  </tr>
+  <tr>
+    <th>Lastname</th>
+    <td>Smith</td>
+    <td>Jackson</td>
+  </tr>
+  <tr>
+    <th>Age</th>
+    <td>50</td>
+    <td>94</td>
+  </tr>
+</table>
+
+<hr>
+
+<h2>3. Align Table Headers</h2>
+<!-- By default, headers are centered and bold -->
+<!-- Use text-align to left-align -->
+<table style="width:100%; border-collapse:collapse;" border="1">
+  <tr>
+    <th style="text-align:left;">Firstname</th>
+    <th style="text-align:left;">Lastname</th>
+    <th style="text-align:left;">Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+</table>
+
+<hr>
+
+<h2>4. Header for Multiple Columns (colspan)</h2>
+<!-- colspan merges two or more columns into one header cell -->
+<table style="width:100%; border-collapse:collapse;" border="1">
+  <tr>
+    <th colspan="2">Name</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+</table>
+
+<hr>
+
+<h2>5. Table Caption</h2>
+<!-- caption provides a title for the table -->
+<table style="width:100%; border-collapse:collapse;" border="1">
+  <caption>Monthly Savings</caption>
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+  <tr>
+    <td>February</td>
+    <td>$50</td>
+  </tr>
+</table>
+
+<hr>
+
+<h2>6. Complex Header Example</h2>
+<!-- Example showing headers for multiple days and time slots -->
+<table style="width:100%; border-collapse:collapse; text-align:center;" border="1">
+  <caption>Weekly Schedule</caption>
+  <tr style="background-color:#f2f2f2;">
+    <th>Time</th>
+    <th>Mon</th>
+    <th>Tue</th>
+    <th>Wed</th>
+    <th>Thu</th>
+    <th>Fri</th>
+  </tr>
+  <tr><th>8:00</th><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><th>9:00</th><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><th>10:00</th><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><th>11:00</th><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><th>12:00</th><td></td><td></td><td></td><td></td><td></td></tr>
+</table>
+
+<hr>
+
+<h2>Notes</h2>
+<ul>
+  <li><b>&lt;th&gt;</b> → Defines a header cell in a table.</li>
+  <li><b>&lt;td&gt;</b> → Defines a standard data cell.</li>
+  <li><b>colspan</b> → Merges multiple columns into one header cell.</li>
+  <li><b>rowspan</b> → Merges multiple rows into one header cell.</li>
+  <li><b>&lt;caption&gt;</b> → Adds a title for the entire table.</li>
+  <li>By default, table headers are <b>bold</b> and <b>centered</b>.</li>
+</ul>
+
+<hr>

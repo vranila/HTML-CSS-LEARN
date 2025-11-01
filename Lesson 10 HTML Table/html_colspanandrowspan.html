@@ -1,0 +1,57 @@
+<h1>HTML Table Colspan & Rowspan</h1>
+
+<!-- Used to merge multiple columns or rows into one cell -->
+
+<!-- Table with Colspan -->
+<h2>1. HTML Table - Colspan</h2>
+<!-- colspan merges cells horizontally across multiple columns -->
+<table style="width:60%; border-collapse:collapse; border:1px solid black; text-align:center;">
+  <tr>
+    <th style="border:1px solid black; padding:10px;" colspan="2">Name</th>
+    <th style="border:1px solid black; padding:10px;">Age</th>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:10px;">Jill</td>
+    <td style="border:1px solid black; padding:10px;">Smith</td>
+    <td style="border:1px solid black; padding:10px;">43</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:10px;">Eve</td>
+    <td style="border:1px solid black; padding:10px;">Jackson</td>
+    <td style="border:1px solid black; padding:10px;">57</td>
+  </tr>
+</table>
+
+<p><b>Note:</b> The <code>colspan</code> attribute defines how many columns a cell should span.</p>
+
+<hr>
+
+<!-- Table with Rowspan -->
+<h2>2. HTML Table - Rowspan</h2>
+<!-- rowspan merges cells vertically across multiple rows -->
+<table style="width:40%; border-collapse:collapse; border:1px solid black; text-align:center;">
+  <tr>
+    <th style="border:1px solid black; padding:10px;">Name</th>
+    <td style="border:1px solid black; padding:10px;">Jill</td>
+  </tr>
+  <tr>
+    <th style="border:1px solid black; padding:10px;" rowspan="2">Phone</th>
+    <td style="border:1px solid black; padding:10px;">555-1234</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:10px;">555-8745</td>
+  </tr>
+</table>
+
+<p><b>Note:</b> The <code>rowspan</code> attribute defines how many rows a cell should span.</p>
+
+<hr>
+
+<!--  Summary Notes -->
+<h2>Key Takeaways</h2>
+<ul>
+  <li><b>colspan:</b> Merges columns horizontally.</li>
+  <li><b>rowspan:</b> Merges rows vertically.</li>
+  <li><b>border-collapse:</b> Makes borders clean and unified.</li>
+  <li><b>Use padding:</b> Adds spacing inside cells for readability.</li>
+</ul>

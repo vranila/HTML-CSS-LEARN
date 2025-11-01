@@ -1,0 +1,90 @@
+<h1>HTML Table Padding & Spacing (With Styled Borders)</h1>
+
+<!-- Table with Padding -->
+<h2>1. Table with Cell Padding</h2>
+<table style="width:60%; border-collapse:collapse; border:1px solid black;">
+  <tr>
+    <th style="padding:15px; border:1px solid black;">Hello</th>
+    <th style="padding:15px; border:1px solid black;">Hello</th>
+    <th style="padding:15px; border:1px solid black;">Hello</th>
+  </tr>
+  <tr>
+    <td style="padding:15px; border:1px solid black;">Hello</td>
+    <td style="padding:15px; border:1px solid black;">Hello</td>
+    <td style="padding:15px; border:1px solid black;">Hello</td>
+  </tr>
+  <tr>
+    <td style="padding:15px; border:1px solid black;">Hello</td>
+    <td style="padding:15px; border:1px solid black;">Hello</td>
+    <td style="padding:15px; border:1px solid black;">Hello</td>
+  </tr>
+</table>
+
+<hr>
+
+<!-- Table with Custom Padding -->
+<h2>2. Custom Padding (Different Sides)</h2>
+<table style="width:60%; border-collapse:collapse; border:1px solid black;">
+  <tr>
+    <th style="border:1px solid black; padding-top:10px; padding-bottom:20px; padding-left:30px; padding-right:40px;">Top/Bottom/Left/Right</th>
+    <th style="border:1px solid black; padding-top:10px; padding-bottom:20px; padding-left:30px; padding-right:40px;">Custom</th>
+    <th style="border:1px solid black; padding-top:10px; padding-bottom:20px; padding-left:30px; padding-right:40px;">Padding</th>
+  </tr>
+</table>
+
+<hr>
+
+<!-- Table with Cell Spacing -->
+<h2>3. Table with Cell Spacing</h2>
+<table style="width:60%; border-spacing:20px; border:1px solid black;">
+  <tr>
+    <th style="border:1px solid black;">Hello</th>
+    <th style="border:1px solid black;">Hello</th>
+    <th style="border:1px solid black;">Hello</th>
+  </tr>
+  <tr>
+    <td style="border:1px solid black;">Hello</td>
+    <td style="border:1px solid black;">Hello</td>
+    <td style="border:1px solid black;">Hello</td>
+  </tr>
+</table>
+
+<hr>
+
+<!-- Comparison -->
+<h2>4. Padding vs Spacing Comparison</h2>
+<table style="width:100%; border-collapse:collapse; border:1px solid black;">
+  <tr>
+    <th style="border:1px solid black;">With Padding</th>
+    <th style="border:1px solid black;">With Spacing</th>
+  </tr>
+  <tr>
+    <td style="border:1px solid black;">
+      <table style="border-collapse:collapse; border:1px solid black;">
+        <tr>
+          <td style="border:1px solid black; padding:15px;">Hello</td>
+          <td style="border:1px solid black; padding:15px;">Hello</td>
+        </tr>
+      </table>
+    </td>
+    <td style="border:1px solid black;">
+      <table style="border-spacing:20px; border:1px solid black;">
+        <tr>
+          <td style="border:1px solid black;">Hello</td>
+          <td style="border:1px solid black;">Hello</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<hr>
+
+<!-- Key Points -->
+<h2>Notes:</h2>
+<ul>
+  <li><b>border:</b> Adds visible outlines to table, rows, and cells.</li>
+  <li><b>padding:</b> Controls space inside cells.</li>
+  <li><b>border-spacing:</b> Controls space between cells.</li>
+  <li><b>border-collapse: collapse;</b> merges cell borders into one.</li>
+</ul>

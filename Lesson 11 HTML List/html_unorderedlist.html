@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML Unordered Lists with Borders</title>
+</head>
+<body style="font-family: Arial, sans-serif; line-height:1.6;">
+
+<h1 style="text-align:center;">HTML Unordered Lists</h1>
+
+<!-- Default Unordered List -->
+<h2>Default List (disc)</h2>
+<ul style="border:2px solid #333; padding:15px; width:200px; list-style-type:disc;">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+
+<hr>
+
+<!-- Circle -->
+<h2>List Marker: Circle</h2>
+<ul style="border:2px solid #2196F3; padding:15px; width:200px; list-style-type:circle;">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+
+<hr>
+
+<!-- Square -->
+<h2>List Marker: Square</h2>
+<ul style="border:2px solid #4CAF50; padding:15px; width:200px; list-style-type:square;">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+
+<hr>
+
+<!-- None -->
+<h2>List Marker: None</h2>
+<ul style="border:2px solid #E91E63; padding:15px; width:200px; list-style-type:none;">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+
+<hr>
+
+<!-- Nested List -->
+<h2>Nested Unordered List</h2>
+<ul style="border:2px solid #9C27B0; padding:15px; width:250px; list-style-type:disc;">
+  <li>Coffee</li>
+  <li>Tea
+    <ul style="border:1px dashed #666; padding:10px; margin-top:5px; list-style-type:circle;">
+      <li>Black Tea</li>
+      <li>Green Tea</li>
+    </ul>
+  </li>
+  <li>Milk</li>
+</ul>
+
+<hr>
+
+<!-- Horizontal List (Navigation Menu) -->
+<h2>Horizontal List (Navigation Menu)</h2>
+<ul style="list-style-type:none; margin:0; padding:0; overflow:hidden; background-color:#333; border:2px solid #000; width:fit-content;">
+  <li style="float:left;"><a href="#home" style="display:block; color:white; text-align:center; padding:14px 16px; text-decoration:none;">Home</a></li>
+  <li style="float:left;"><a href="#news" style="display:block; color:white; text-align:center; padding:14px 16px; text-decoration:none;">News</a></li>
+  <li style="float:left;"><a href="#contact" style="display:block; color:white; text-align:center; padding:14px 16px; text-decoration:none;">Contact</a></li>
+  <li style="float:left;"><a href="#about" style="display:block; color:white; text-align:center; padding:14px 16px; text-decoration:none;">About</a></li>
+</ul>
+
+<hr>
+
+<!-- Summary Table -->
+<h2>List Marker Reference</h2>
+<table border="1" cellpadding="8" style="border-collapse:collapse; width:80%; margin:auto;">
+  <tr style="background-color:#D6EEEE;">
+    <th>Value</th>
+    <th>Description</th>
+    <th>Preview</th>
+  </tr>
+  <tr>
+    <td>disc</td>
+    <td>Default bullet</td>
+    <td>• Coffee</td>
+  </tr>
+  <tr>
+    <td>circle</td>
+    <td>Hollow circle</td>
+    <td>○ Coffee</td>
+  </tr>
+  <tr>
+    <td>square</td>
+    <td>Square bullet</td>
+    <td>■ Coffee</td>
+  </tr>
+  <tr>
+    <td>none</td>
+    <td>No bullet</td>
+    <td>Coffee</td>
+  </tr>
+</table>
+
+<hr>
+
+<!-- Key Takeaways -->
+<h2>Chapter Summary</h2>
+<ul style="border:2px solid #444; padding:15px; width:500px; list-style-type:square;">
+  <li><b>&lt;ul&gt;</b> defines an unordered list.</li>
+  <li><b>&lt;li&gt;</b> defines individual list items.</li>
+  <li><b>list-style-type</b> controls bullet style (disc, circle, square, none).</li>
+  <li>Lists can be nested and combined with CSS for menus.</li>
+  <li>Use <b>float:left;</b> for horizontal navigation lists.</li>
+</ul>
+
+</body>
+</html>

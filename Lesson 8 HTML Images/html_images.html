@@ -3,8 +3,8 @@
 <!-- HTML Images -->
 <!-- 
 <img> → Used to display an image on a webpage. It’s a self-closing tag, meaning it doesn’t need </img>.
-src="..." → The src (source) attribute tells the browser where to find the image file.
-alt="..." → The alt (alternate text) is shown if the image can’t be loaded or viewed. It also improves accessibility and SEO.
+src - specifies the path or URL of the image file.Ensure the path is correct; otherwise, a broken image icon appears.
+alt - attribute defines alternative text for an image.It improves accessibility for screen readers and acts as fallback text.
 width="104" → Sets the width of the image to 104 pixels.
 height="142" → Sets the height of the image to 142 pixels.
 -->
@@ -15,4 +15,71 @@ alt="flower" width="104" height="142">
 
 <hr>
 
+<h2>Images in Another Folder</h2>
+<!-- When your image is stored in a sub-folder, include the folder name in 'src'. -->
+<img src="/images/html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">
+
+<hr>
+
+<h2>Images on Another Server or Website</h2>
+<!-- Use an absolute URL for images hosted on another website. -->
+<img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com">
+
+<!-- Note: External images can be copyrighted or removed anytime. -->
+
+<hr>
+
+<h2>Animated Images</h2>
+<!-- You can use GIF format for simple animations. -->
+<img src="../assests/images/programming.gif" alt="Computer Man" style="width:48px;height:48px;">
+
+<hr>
+
+<h2>Image as a Link</h2>
+<!-- Place an <img> inside an <a> tag to make the image clickable. -->
+<a href="default.asp">
+  <img src="../assests/images/smiley.jpg" alt="HTML tutorial" style="width:42px;height:42px;">
+</a>
+
+<hr>
+
+<h2>Image Floating</h2>
+<!-- Use the CSS 'float' property to align images left or right with text. -->
+<p>
+    <img src="https://tenor.com/gcvsp8SG7b2.gif" alt="Smiley face" style="float:right;width:42px;height:42px;">
+  The image will float to the right of the text.
+</p>
+
+<p>
+  <img src="https://tenor.com/gcvsp8SG7b2.gif" alt="Smiley face" style="float:left;width:42px;height:42px;">
+  The image will float to the left of the text.
+</p>
+
+<hr>
+
+<h2>Common Image Formats</h2>
+<!-- Most browsers support the following image file types. -->
+<table style="border-collapse:collapse; width:100%;">
+  <tr>
+    <th style="border:1px solid black; padding:8px; background-color:#f2f2f2;">Abbreviation</th>
+    <th style="border:1px solid black; padding:8px; background-color:#f2f2f2;">File Format</th>
+    <th style="border:1px solid black; padding:8px; background-color:#f2f2f2;">File Extension</th>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">PNG</td>
+    <td style="border:1px solid black; padding:8px;">Portable Network Graphics</td>
+    <td style="border:1px solid black; padding:8px;">.png</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">JPEG</td>
+    <td style="border:1px solid black; padding:8px;">Joint Photographic Experts Group</td>
+    <td style="border:1px solid black; padding:8px;">.jpg, .jpeg</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">GIF</td>
+    <td style="border:1px solid black; padding:8px;">Graphics Interchange Format</td>
+    <td style="border:1px solid black; padding:8px;">.gif</td>
+  </tr>
+</table>
+<hr>
 

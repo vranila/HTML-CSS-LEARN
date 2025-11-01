@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML Div Element Examples</title>
+</head>
+<body style="font-family: Arial, sans-serif; line-height:1.6;">
+
+<h1 style="text-align:center;">HTML &lt;div&gt; Element</h1>
+
+<p>The <b>&lt;div&gt;</b> element acts as a container for structuring content on a web page. It’s block-level by default, meaning it occupies full width and starts on a new line.</p>
+
+<hr>
+
+<!-- Basic Div Example -->
+<h2>Example: Basic &lt;div&gt; Usage</h2>
+<p><b>Code:</b></p>
+<pre style="background:#f8f8f8; border:1px solid #ccc; padding:10px;">
+Welcome to our website &lt;div&gt;I am a separate block&lt;/div&gt; Explore more below.
+</pre>
+
+<p><b>Result:</b></p>
+<div style="border:2px solid #333; padding:10px; margin:10px 0;">
+  Welcome to our website
+  <div style="border:1px dashed #2196F3; padding:10px; margin:5px 0;">I am a separate block of content.</div>
+  Explore more below.
+</div>
+
+<hr>
+
+<!-- Div as a Container -->
+<h2>&lt;div&gt; as a Container</h2>
+<div style="border:2px solid #4CAF50; padding:15px; width:350px;">
+  <h2>About Paris</h2>
+  <p>Paris is known as the City of Light and the capital of France.</p>
+  <p>It’s famous for the Eiffel Tower, fashion, and fine art.</p>
+</div>
+
+<hr>
+
+<!-- Center Align -->
+<h2>Center Align a &lt;div&gt;</h2>
+<div style="width:300px; margin:auto; border:2px solid #E91E63; padding:15px;">
+  <h2>Tokyo Overview</h2>
+  <p>Tokyo is a bustling metropolis that blends tradition with innovation.</p>
+  <p>It’s a global leader in technology and culture.</p>
+</div>
+
+<hr>
+
+<!-- Multiple Divs -->
+<h2>Multiple &lt;div&gt; Elements</h2>
+<div style="border:2px solid #9C27B0; padding:15px; margin-bottom:10px;">
+  <h2>New York</h2>
+  <p>New York City is known as "The Big Apple".</p>
+  <p>It’s a hub for finance, fashion, and entertainment.</p>
+</div>
+
+<div style="border:2px solid #9C27B0; padding:15px; margin-bottom:10px;">
+  <h2>Dubai</h2>
+  <p>Dubai is a desert city turned luxury destination.</p>
+  <p>Home to the Burj Khalifa, the world’s tallest building.</p>
+</div>
+
+<div style="border:2px solid #9C27B0; padding:15px;">
+  <h2>Singapore</h2>
+  <p>Singapore is a global financial center and island nation.</p>
+  <p>Known for its cleanliness and efficient infrastructure.</p>
+</div>
+
+<hr>
+
+<!-- Float Example -->
+<h2>Align &lt;div&gt; Side by Side - Using Float</h2>
+<div style="width:100%; overflow:auto; border:2px solid #333; padding:10px;">
+  <div style="width:33%; float:left; border:1px solid #2196F3; padding:10px; box-sizing:border-box;">
+    <h2>Berlin</h2>
+    <p>Germany’s capital, known for art and history.</p>
+    <p>Iconic landmark: Brandenburg Gate.</p>
+  </div>
+  <div style="width:33%; float:left; border:1px solid #4CAF50; padding:10px; box-sizing:border-box;">
+    <h2>Sydney</h2>
+    <p>Australia’s largest city with beautiful harbors.</p>
+    <p>Famous for the Sydney Opera House.</p>
+  </div>
+  <div style="width:33%; float:left; border:1px solid #E91E63; padding:10px; box-sizing:border-box;">
+    <h2>Toronto</h2>
+    <p>Canada’s cultural and financial capital.</p>
+    <p>Known for the CN Tower skyline.</p>
+  </div>
+</div>
+
+<hr>
+
+<!-- Inline-block Example -->
+<h2>Align &lt;div&gt; Side by Side - Using Inline-block</h2>
+<div style="border:2px solid #333; padding:10px;">
+  <div style="width:30%; display:inline-block; border:1px solid #2196F3; padding:10px; vertical-align:top;">
+    <h2>Seoul</h2>
+    <p>A global tech hub with a rich cultural heritage.</p>
+  </div>
+  <div style="width:30%; display:inline-block; border:1px solid #4CAF50; padding:10px; vertical-align:top;">
+    <h2>Madrid</h2>
+    <p>Spain’s capital, known for its art and football passion.</p>
+  </div>
+  <div style="width:30%; display:inline-block; border:1px solid #E91E63; padding:10px; vertical-align:top;">
+    <h2>Cape Town</h2>
+    <p>South Africa’s coastal gem with stunning Table Mountain views.</p>
+  </div>
+</div>
+
+<hr>
+
+<!-- Flex Example -->
+<h2>Align &lt;div&gt; Side by Side - Using Flex</h2>
+<div style="display:flex; gap:10px; border:2px solid #333; padding:10px;">
+  <div style="flex:1; border:1px solid #2196F3; padding:10px;">
+    <h2>Bangkok</h2>
+    <p>Thailand’s capital, vibrant and full of life.</p>
+  </div>
+  <div style="flex:1; border:1px solid #4CAF50; padding:10px;">
+    <h2>Vancouver</h2>
+    <p>Canadian city famous for its scenic mountains and ocean views.</p>
+  </div>
+  <div style="flex:1; border:1px solid #E91E63; padding:10px;">
+    <h2>Zurich</h2>
+    <p>Switzerland’s financial powerhouse surrounded by lakes and Alps.</p>
+  </div>
+</div>
+
+<hr>
+
+<!-- Grid Example -->
+<h2>Align &lt;div&gt; Side by Side - Using Grid</h2>
+<div style="display:grid; grid-template-columns:33% 33% 33%; gap:10px; border:2px solid #333; padding:10px;">
+  <div style="border:1px solid #2196F3; padding:10px;">
+    <h2>Hong Kong</h2>
+    <p>Dynamic city blending East and West.</p>
+  </div>
+  <div style="border:1px solid #4CAF50; padding:10px;">
+    <h2>Stockholm</h2>
+    <p>Sweden’s capital built on islands with modern design and nature.</p>
+  </div>
+  <div style="border:1px solid #E91E63; padding:10px;">
+    <h2>Los Angeles</h2>
+    <p>City of stars — the heart of film and entertainment.</p>
+  </div>
+</div>
+
+<hr>
+
+<!-- Summary -->
+<h2>Summary of Layout Methods</h2>
+<table border="1" cellpadding="8" style="border-collapse:collapse; width:90%; margin:auto;">
+  <tr style="background-color:#D6EEEE;">
+    <th>Method</th>
+    <th>CSS Used</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><b>Float</b></td>
+    <td>float: left;</td>
+    <td>Classic method, requires clearing for layout control.</td>
+  </tr>
+  <tr>
+    <td><b>Inline-block</b></td>
+    <td>display: inline-block;</td>
+    <td>Simple alignment without floats.</td>
+  </tr>
+  <tr>
+    <td><b>Flexbox</b></td>
+    <td>display: flex;</td>
+    <td>Responsive layout control, easy vertical/horizontal centering.</td>
+  </tr>
+  <tr>
+    <td><b>Grid</b></td>
+    <td>display: grid;</td>
+    <td>Best for advanced layouts with rows and columns.</td>
+  </tr>
+</table>
+
+</body>
+</html>

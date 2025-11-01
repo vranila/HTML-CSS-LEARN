@@ -1,0 +1,107 @@
+<h1>HTML Class Attribute</h1>
+
+<!-- The class attribute assigns one or more class names to an HTML element. -->
+<!-- Multiple elements can share the same class for consistent styling or scripting. -->
+<!-- Commonly used by CSS to apply styles, and by JavaScript for DOM manipulation. -->
+
+<h2>1. Basic Example</h2>
+
+<p class="highlight">This paragraph has a class named "highlight".</p>
+<p class="highlight">This is another paragraph using the same class.</p>
+
+<!-- CSS Example -->
+<style>
+  .highlight {
+    background-color: #D6EEEE;
+    border-left: 4px solid #0aa;
+    padding: 10px;
+  }
+</style>
+
+<hr>
+
+<h2>2. Multiple Classes</h2>
+
+<p class="highlight bold-text">This element uses two classes: "highlight" and "bold-text".</p>
+
+<!-- CSS Example -->
+<style>
+  .bold-text {
+    font-weight: bold;
+    color: #333;
+  }
+</style>
+
+<!-- Notes -->
+<!-- You can assign multiple classes by separating them with a space. -->
+<!-- Example: class="highlight bold-text" -->
+
+<hr>
+
+<h2>3. Applying Class to Multiple Elements</h2>
+
+<div class="card">This is a card.</div>
+<div class="card">This is another card.</div>
+<div class="card">All use the same "card" class.</div>
+
+<style>
+  .card {
+    border: 1px solid #999;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 6px 0;
+    background-color: #f9f9f9;
+  }
+</style>
+
+<hr>
+
+<h2>4. Using Classes with JavaScript</h2>
+
+<p id="demo" class="highlight">Click the button to change my style!</p>
+
+<button onclick="document.getElementById('demo').classList.toggle('bold-text')">
+  Toggle Bold
+</button>
+
+<!-- JavaScript allows you to access, add, remove, or toggle class names dynamically. -->
+
+<hr>
+
+<h2>5. Summary Table</h2>
+<table border="1" cellpadding="8" style="border-collapse:collapse; text-align:left;">
+  <tr>
+    <th>Feature</th>
+    <th>Description</th>
+    <th>Example</th>
+  </tr>
+  <tr>
+    <td>Assign a class</td>
+    <td>Adds a name to an element for styling or scripting</td>
+    <td>&lt;p class="highlight"&gt;Text&lt;/p&gt;</td>
+  </tr>
+  <tr>
+    <td>Multiple classes</td>
+    <td>Separate names by spaces</td>
+    <td>&lt;div class="card shadow"&gt;&lt;/div&gt;</td>
+  </tr>
+  <tr>
+    <td>Used in CSS</td>
+    <td>To style elements with specific classes</td>
+    <td>.highlight { color: blue; }</td>
+  </tr>
+  <tr>
+    <td>Used in JavaScript</td>
+    <td>To manipulate elements dynamically</td>
+    <td>element.classList.toggle('active')</td>
+  </tr>
+</table>
+
+<hr>
+
+<h2>6. Summary</h2>
+<ul>
+  <li><b>class</b> → Assigns one or more identifiers to an element</li>
+  <li><b>Shared usage</b> → Multiple elements can share the same class</li>
+  <li><b>Used by</b> → CSS (for styling) and JavaScript (for manipulation)</li>
+</ul>

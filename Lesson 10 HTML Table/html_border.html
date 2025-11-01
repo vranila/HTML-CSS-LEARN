@@ -1,0 +1,110 @@
+<h1>HTML Table Borders</h1>
+<!--
+HTML tables can have borders with different styles, colors, and shapes.
+The CSS border properties are used to customize how table borders appear.
+-->
+
+<hr>
+
+<h2>1. Basic Table Border</h2>
+<!-- Adds a simple black border around the table, header, and data cells -->
+<table style="border:1px solid black;">
+  <tr>
+    <th style="border:1px solid black;">Name</th>
+    <th style="border:1px solid black;">Age</th>
+  </tr>
+  <tr>
+    <td style="border:1px solid black;">John</td>
+    <td style="border:1px solid black;">25</td>
+  </tr>
+</table>
+
+<hr>
+
+<h2>2. Collapsed Table Borders</h2>
+<!-- Removes double borders between cells -->
+<table style="border-collapse:collapse; border:1px solid black;">
+  <tr>
+    <th style="border:1px solid black;">Name</th>
+    <th style="border:1px solid black;">City</th>
+  </tr>
+  <tr>
+    <td style="border:1px solid black;">Alice</td>
+    <td style="border:1px solid black;">London</td>
+  </tr>
+</table>
+
+<hr>
+
+<h2>3. Styled Table Borders</h2>
+<!-- Colored background with invisible (white) borders -->
+<table style="border-collapse:collapse;">
+  <tr>
+    <th style="border:1px solid white; background-color:#96D4D4;">Course</th>
+    <th style="border:1px solid white; background-color:#96D4D4;">Duration</th>
+  </tr>
+  <tr>
+    <td style="border:1px solid white; background-color:#96D4D4;">HTML</td>
+    <td style="border:1px solid white; background-color:#96D4D4;">1 Month</td>
+  </tr>
+</table>
+
+<hr>
+
+<h2>4. Rounded Table Borders</h2>
+<!-- Uses border-radius for smooth, rounded corners -->
+<table style="border-collapse:collapse; border:1px solid black; border-radius:10px;">
+  <tr>
+    <th style="border:1px solid black; border-radius:10px;">Product</th>
+    <th style="border:1px solid black; border-radius:10px;">Price</th>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; border-radius:10px;">Laptop</td>
+    <td style="border:1px solid black; border-radius:10px;">$1200</td>
+  </tr>
+</table>
+
+<hr>
+
+<h2>5. Dotted Table Borders</h2>
+<!-- Demonstrates different border styles -->
+<table style="border-collapse:collapse;">
+  <tr>
+    <th style="border:2px dotted black;">Dotted</th>
+    <th style="border:2px dashed black;">Dashed</th>
+    <th style="border:2px solid black;">Solid</th>
+  </tr>
+  <tr>
+    <td style="border:2px double black;">Double</td>
+    <td style="border:2px groove black;">Groove</td>
+    <td style="border:2px ridge black;">Ridge</td>
+  </tr>
+</table>
+
+<hr>
+
+<h2>6. Border Color</h2>
+<!-- Customize border color using border-color -->
+<table style="border-collapse:collapse;">
+  <tr>
+    <th style="border:2px solid #96D4D4;">Subject</th>
+    <th style="border:2px solid #96D4D4;">Score</th>
+  </tr>
+  <tr>
+    <td style="border:2px solid #96D4D4;">Math</td>
+    <td style="border:2px solid #96D4D4;">98</td>
+  </tr>
+</table>
+
+<hr>
+
+<h2>Notes</h2>
+<ul>
+  <li><b>border</b> — Defines width, style, and color (e.g., <code>1px solid black</code>).</li>
+  <li><b>border-collapse: collapse;</b> — Merges double borders into one.</li>
+  <li><b>border-radius</b> — Adds rounded corners.</li>
+  <li><b>border-style</b> — Options: dotted, dashed, solid, double, groove, ridge, inset, outset, none.</li>
+  <li><b>border-color</b> — Changes the color of the border.</li>
+</ul>
+
+<hr>

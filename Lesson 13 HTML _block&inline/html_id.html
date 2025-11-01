@@ -1,0 +1,151 @@
+<h1>HTML id Attribute</h1>
+
+<!-- The id attribute assigns a unique identifier to an HTML element. -->
+<!-- Each id must be unique within an HTML document. -->
+<!-- Commonly used by CSS to style specific elements and by JavaScript to manipulate them. -->
+
+<h2>1. Basic Example</h2>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  #myHeader {
+    background-color: lightblue;
+    color: black;
+    padding: 40px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<h1 id="myHeader">My Header</h1>
+
+</body>
+</html>
+
+<!-- Explanation:
+The <h1> element above has a unique id "myHeader".
+The CSS selector #myHeader targets that specific element only. -->
+
+<hr>
+
+<h2>2. Rules for Using the id Attribute</h2>
+<ul>
+  <li>Each id must be unique within an HTML document.</li>
+  <li>The id name is case sensitive.</li>
+  <li>The id must contain at least one character.</li>
+  <li>The id cannot start with a number or include spaces.</li>
+</ul>
+
+<hr>
+
+<h2>3. Difference Between Class and ID</h2>
+
+<!-- A class can be used by multiple elements.
+     An id must be unique and used by only one element. -->
+
+<style>
+  /* Style the element with the id "myHeader" */
+  #myHeader {
+    background-color: lightblue;
+    color: black;
+    padding: 40px;
+    text-align: center;
+  }
+
+  /* Style all elements with the class "city" */
+  .city {
+    background-color: tomato;
+    color: white;
+    padding: 10px;
+  }
+</style>
+
+<!-- Unique element using ID -->
+<h1 id="myHeader">My Cities</h1>
+
+<!-- Multiple elements using CLASS -->
+<h2 class="city">London</h2>
+<p>London is the capital of England.</p>
+
+<h2 class="city">Paris</h2>
+<p>Paris is the capital of France.</p>
+
+<h2 class="city">Tokyo</h2>
+<p>Tokyo is the capital of Japan.</p>
+
+<hr>
+
+<h2>4. HTML Bookmarks Using id</h2>
+
+<!-- You can use the id attribute to create bookmarks (jump links) within a page. -->
+
+<!-- Create a bookmark -->
+<h2 id="C4">Chapter 4</h2>
+
+<!-- Add a link to the bookmark on the same page -->
+<a href="#C4">Jump to Chapter 4</a>
+
+<!-- Or from another page -->
+<!-- <a href="html_demo.html#C4">Jump to Chapter 4</a> -->
+
+<hr>
+
+<h2>5. Using id with JavaScript</h2>
+
+<!-- The id can be used to access and modify specific elements using JavaScript. -->
+
+<p id="demo">Click the button to change this text.</p>
+
+<button onclick="displayResult()">Click Me</button>
+
+<script>
+  function displayResult() {
+    document.getElementById("demo").innerHTML = "Have a nice day!";
+  }
+</script>
+
+<hr>
+
+<h2>6. Summary Table</h2>
+<table border="1" cellpadding="8" style="border-collapse:collapse; text-align:left;">
+  <tr>
+    <th>Feature</th>
+    <th>Description</th>
+    <th>Example</th>
+  </tr>
+  <tr>
+    <td>Uniqueness</td>
+    <td>Each element must have a unique id</td>
+    <td>&lt;h1 id="header"&gt;Title&lt;/h1&gt;</td>
+  </tr>
+  <tr>
+    <td>CSS Usage</td>
+    <td>Used to style a single, unique element</td>
+    <td>#header { color: blue; }</td>
+  </tr>
+  <tr>
+    <td>JavaScript Usage</td>
+    <td>Used to access/manipulate an element directly</td>
+    <td>document.getElementById("header")</td>
+  </tr>
+  <tr>
+    <td>Bookmark</td>
+    <td>Used to jump to specific sections of a page</td>
+    <td>&lt;a href="#section1"&gt;Go to Section 1&lt;/a&gt;</td>
+  </tr>
+</table>
+
+<hr>
+
+<h2>7. Chapter Summary</h2>
+<ul>
+  <li>The <b>id</b> attribute assigns a unique identifier to an HTML element.</li>
+  <li>Each id must be unique within a document.</li>
+  <li>Used by CSS and JavaScript for targeting and manipulation.</li>
+  <li>Case sensitive and cannot start with a number.</li>
+  <li>Also used to create bookmarks on web pages.</li>
+  <li>Accessed in JavaScript using <code>getElementById()</code>.</li>
+</ul>

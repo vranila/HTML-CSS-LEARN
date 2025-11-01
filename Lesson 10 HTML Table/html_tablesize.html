@@ -1,0 +1,85 @@
+<h1>HTML Table Sizes</h1>
+<!--
+HTML tables can have custom widths and heights.
+You can set size for the entire table, specific columns, or rows using the CSS width and height properties.
+-->
+
+<hr>
+
+<h2>1. HTML Table Width</h2>
+<!-- Sets the overall table width -->
+<!-- Using percentage makes the table responsive to its parent element -->
+<table style="width:100%; border-collapse:collapse;" border="1">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+</table>
+
+<hr>
+
+<h2>2. HTML Table Column Width</h2>
+<!-- Sets width for specific columns using style attribute on <th> or <td> -->
+<table style="width:100%; border-collapse:collapse;" border="1">
+  <tr>
+    <th style="width:70%;">Firstname</th>
+    <th>Lastname</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+</table>
+
+<hr>
+
+<h2>3. HTML Table Row Height</h2>
+<!-- Sets the height of a specific row -->
+<table style="width:100%; border-collapse:collapse;">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Age</th>
+  </tr>
+  <tr style="height:200px;">
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+</table>
+
+<hr>
+
+<h2>Notes</h2>
+<ul>
+  <li><b>width</b> — Defines the horizontal size of the table, column, or cell.</li>
+  <li><b>height</b> — Defines the vertical size of a table row or cell.</li>
+  <li>Use <b>percentage (%)</b> for responsive layouts (relative to parent container).</li>
+  <li>Use <b>pixels (px)</b> for fixed dimensions.</li>
+  <li>Always use <b>border-collapse: collapse;</b> for clean borders.</li>
+</ul>
+
+<hr>
