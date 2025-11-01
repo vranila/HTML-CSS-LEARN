@@ -1,0 +1,232 @@
+<h1>HTML Layout Elements</h1>
+
+<p>HTML provides several semantic elements that define the different structural parts of a web page. These elements improve readability, accessibility, and SEO by giving meaning to the content.</p>
+
+<hr>
+
+<h2>1. HTML5 Semantic Elements</h2>
+
+<table border="1" cellpadding="8" style="border-collapse: collapse; width: 100%; text-align: left;">
+  <tr>
+    <th>Element</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><code>&lt;header&gt;</code></td>
+    <td>Defines a header for a document or a section. Typically contains a logo, site title, or navigation links.</td>
+  </tr>
+  <tr>
+    <td><code>&lt;nav&gt;</code></td>
+    <td>Defines a section for navigation links such as menus or tables of contents.</td>
+  </tr>
+  <tr>
+    <td><code>&lt;section&gt;</code></td>
+    <td>Defines a section within a document, usually with a related topic or heading.</td>
+  </tr>
+  <tr>
+    <td><code>&lt;article&gt;</code></td>
+    <td>Defines independent, self-contained content, like a blog post or news article.</td>
+  </tr>
+  <tr>
+    <td><code>&lt;aside&gt;</code></td>
+    <td>Defines content that is related to the main content but placed aside — often used for sidebars or advertisements.</td>
+  </tr>
+  <tr>
+    <td><code>&lt;footer&gt;</code></td>
+    <td>Defines a footer for a document or section. Usually contains author info, copyright, or contact details.</td>
+  </tr>
+  <tr>
+    <td><code>&lt;details&gt;</code></td>
+    <td>Defines additional details that users can view or hide on demand.</td>
+  </tr>
+  <tr>
+    <td><code>&lt;summary&gt;</code></td>
+    <td>Defines a summary or heading for the <code>&lt;details&gt;</code> element.</td>
+  </tr>
+</table>
+
+<hr>
+
+<h2>2. Example: Basic HTML Layout</h2>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;HTML Layout Example&lt;/title&gt;
+  &lt;style&gt;
+    body {font-family: Arial, sans-serif; margin: 0;}
+    header, footer {background-color: #f1f1f1; text-align: center; padding: 20px;}
+    nav {background-color: #333; color: white; padding: 10px;}
+    nav a {color: white; margin: 10px; text-decoration: none;}
+    section {display: flex; margin: 10px;}
+    article {flex: 3; padding: 20px;}
+    aside {flex: 1; background-color: #f9f9f9; padding: 20px;}
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;header&gt;
+  &lt;h1&gt;My Website&lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;nav&gt;
+  &lt;a href="#"&gt;Home&lt;/a&gt;
+  &lt;a href="#"&gt;About&lt;/a&gt;
+  &lt;a href="#"&gt;Contact&lt;/a&gt;
+&lt;/nav&gt;
+
+&lt;section&gt;
+  &lt;article&gt;
+    &lt;h2&gt;Main Content&lt;/h2&gt;
+    &lt;p&gt;This is the primary area where your content appears.&lt;/p&gt;
+  &lt;/article&gt;
+
+  &lt;aside&gt;
+    &lt;h3&gt;Sidebar&lt;/h3&gt;
+    &lt;p&gt;This is related content or additional information.&lt;/p&gt;
+  &lt;/aside&gt;
+&lt;/section&gt;
+
+&lt;footer&gt;
+  &lt;p&gt;© 2025 My Website&lt;/p&gt;
+&lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<hr>
+
+<h2>3. HTML Layout Techniques</h2>
+
+<p>There are four primary techniques to create multi-column layouts in HTML. Each has its own strengths and limitations.</p>
+
+<table border="1" cellpadding="8" style="border-collapse: collapse; width: 100%; text-align: left;">
+  <tr>
+    <th>Technique</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><b>CSS Frameworks</b></td>
+    <td>Pre-built CSS libraries such as Bootstrap or Tailwind CSS help create responsive layouts quickly without writing complex CSS.</td>
+  </tr>
+  <tr>
+    <td><b>CSS Float Property</b></td>
+    <td>Older technique that uses <code>float: left;</code> or <code>float: right;</code> to align elements. Requires clearfix fixes and is less flexible than newer methods.</td>
+  </tr>
+  <tr>
+    <td><b>CSS Flexbox</b></td>
+    <td>Modern one-dimensional layout system for aligning elements horizontally or vertically with dynamic resizing.</td>
+  </tr>
+  <tr>
+    <td><b>CSS Grid</b></td>
+    <td>Two-dimensional layout system that allows designing complex and responsive grid-based structures.</td>
+  </tr>
+</table>
+
+<hr>
+
+<h2>4. Example: CSS Float Layout</h2>
+
+<pre>
+&lt;style&gt;
+.container {width: 100%;}
+.left {float: left; width: 70%; background: #ddd; padding: 20px;}
+.right {float: left; width: 30%; background: #f1f1f1; padding: 20px;}
+&lt;/style&gt;
+
+&lt;div class="container"&gt;
+  &lt;div class="left"&gt;Main Content&lt;/div&gt;
+  &lt;div class="right"&gt;Sidebar&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<hr>
+
+<h2>5. Example: CSS Flexbox Layout</h2>
+
+<pre>
+&lt;style&gt;
+.container {display: flex;}
+.box {flex: 1; background-color: #ccc; padding: 20px; margin: 5px; text-align: center;}
+&lt;/style&gt;
+
+&lt;div class="container"&gt;
+  &lt;div class="box"&gt;Box 1&lt;/div&gt;
+  &lt;div class="box"&gt;Box 2&lt;/div&gt;
+  &lt;div class="box"&gt;Box 3&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<hr>
+
+<h2>6. Example: CSS Grid Layout</h2>
+
+<pre>
+&lt;style&gt;
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  text-align: center;
+}
+&lt;/style&gt;
+
+&lt;div class="grid-container"&gt;
+  &lt;div class="grid-item"&gt;1&lt;/div&gt;
+  &lt;div class="grid-item"&gt;2&lt;/div&gt;
+  &lt;div class="grid-item"&gt;3&lt;/div&gt;
+  &lt;div class="grid-item"&gt;4&lt;/div&gt;
+  &lt;div class="grid-item"&gt;5&lt;/div&gt;
+  &lt;div class="grid-item"&gt;6&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<hr>
+
+<h2>7. Example: CSS Framework Layout (Bootstrap)</h2>
+
+<pre>
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"&gt;
+
+&lt;div class="container mt-3"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-sm-8 bg-light p-3"&gt;Main Content&lt;/div&gt;
+    &lt;div class="col-sm-4 bg-secondary text-white p-3"&gt;Sidebar&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<hr>
+
+<h2>8. Chapter Summary</h2>
+
+<ul>
+  <li><code>&lt;header&gt;</code> - Defines a header for a page or section</li>
+  <li><code>&lt;nav&gt;</code> - Contains navigation links</li>
+  <li><code>&lt;section&gt;</code> - Represents a thematic grouping of content</li>
+  <li><code>&lt;article&gt;</code> - Defines independent content</li>
+  <li><code>&lt;aside&gt;</code> - Defines sidebar or related content</li>
+  <li><code>&lt;footer&gt;</code> - Defines a footer for the page</li>
+  <li><code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> – Provide toggleable additional info</li>
+  <li>Layout techniques include CSS Frameworks, Float, Flexbox, and Grid</li>
+</ul>
+
+<hr>
+
+<h2>9. Exercise</h2>
+
+<p><b>Question:</b> Which CSS layout method is best suited for building a two-dimensional layout?</p>
+
+<ol type="A">
+  <li>CSS Float</li>
+  <li>CSS Flexbox</li>
+  <li>CSS Grid</li>
+</ol>

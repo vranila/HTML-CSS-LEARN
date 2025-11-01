@@ -1,0 +1,172 @@
+
+<h1>HTML - The &lt;head&gt; Element</h1>
+<p>The HTML <code>&lt;head&gt;</code> element is a container for metadata — information about the document that is not displayed directly on the page. It sits between the <code>&lt;html&gt;</code> and <code>&lt;body&gt;</code> tags and defines critical information such as the page title, character encoding, styles, links, and scripts.</p>
+<hr>
+
+<h2>1. Structure of the &lt;head&gt; Element</h2>
+<p>The <code>&lt;head&gt;</code> section typically includes the following elements:</p>
+<ul>
+  <li><code>&lt;title&gt;</code> - Defines the title shown in the browser tab.</li>
+  <li><code>&lt;style&gt;</code> - Adds internal CSS styles.</li>
+  <li><code>&lt;meta&gt;</code> - Specifies metadata like description, author, and viewport.</li>
+  <li><code>&lt;link&gt;</code> - Links to external files such as stylesheets or icons.</li>
+  <li><code>&lt;script&gt;</code> - Embeds or links JavaScript code.</li>
+  <li><code>&lt;base&gt;</code> - Sets a base URL or default target for all links.</li>
+</ul>
+<hr>
+
+<h2>2. The &lt;title&gt; Element</h2>
+<p>The <code>&lt;title&gt;</code> element defines the document's title. It appears on the browser tab, in bookmarks, and is critical for SEO.</p>
+
+<pre>
+&lt;title&gt;MindCraft AI - Learn Smarter&lt;/title&gt;
+</pre>
+
+<p><b>Key Benefits:</b></p>
+<ul>
+  <li>Displayed on browser tabs.</li>
+  <li>Used when adding a page to bookmarks.</li>
+  <li>Improves search engine ranking.</li>
+</ul>
+<hr>
+
+<h2>3. The &lt;style&gt; Element</h2>
+<p>The <code>&lt;style&gt;</code> element allows you to include internal CSS styling within the HTML document.</p>
+<pre>
+&lt;style&gt;
+  body { background-color: #eef5ff; }
+  h1 { color: #0a66c2; }
+  p { font-size: 16px; color: #333; }
+&lt;/style&gt;
+</pre>
+<hr>
+
+<h2>4. The &lt;link&gt; Element</h2>
+<p>The <code>&lt;link&gt;</code> tag connects your HTML document to external resources — most commonly external CSS stylesheets.</p>
+<pre>
+&lt;link rel="stylesheet" href="styles.css"&gt;
+</pre>
+<p>It can also be used for favicons or preloading resources.</p>
+<hr>
+
+<h2>5. The &lt;meta&gt; Element</h2>
+<p><code>&lt;meta&gt;</code> tags define metadata such as character encoding, page description, author, keywords, and viewport settings. They don’t render visible content but are essential for browser behavior and SEO.</p>
+<h3>Examples:</h3>
+<pre>
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="description" content="AI learning platform for future-ready skills."&gt;
+&lt;meta name="keywords" content="AI, HTML, CSS, JavaScript, MindCraft"&gt;
+&lt;meta name="author" content="MindCraft AI"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</pre>
+
+<hr>
+
+<h2>6. Setting the Viewport</h2>
+<p>The viewport controls how a web page is displayed on different devices. This meta tag ensures responsiveness across mobile and desktop screens.</p>
+<pre>
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</pre>
+
+<p><b>Explanation:</b></p>
+<ul>
+  <li><b>width=device-width</b> — Sets the page width equal to the device’s screen width.</li>
+  <li><b>initial-scale=1.0</b> — Sets the initial zoom level.</li>
+</ul>
+<hr>
+
+<h2>7. The &lt;script&gt; Element</h2>
+<p>The <code>&lt;script&gt;</code> tag allows you to include JavaScript, either directly within the HTML or from an external file.</p>
+<pre>
+&lt;script&gt;
+  function showMessage() {
+    document.getElementById("demo").innerHTML = "Hello, MindCraft!";
+  }
+&lt;/script&gt;
+</pre>
+<p>You can also link external scripts:</p>
+<pre>
+&lt;script src="main.js"&gt;&lt;/script&gt;
+</pre>
+
+<hr>
+
+<h2>8. The &lt;base&gt; Element</h2>
+<p>The <code>&lt;base&gt;</code> tag sets a base URL for all relative links in a document. It must appear only once within the <code>&lt;head&gt;</code> section.</p>
+<pre>
+&lt;base href="https://mindcraft.ai/" target="_blank"&gt;
+</pre>
+<p>Now, all relative links will open from this base URL.</p>
+<hr>
+
+<h2>9. Example: Complete Head Section</h2>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;MindCraft AI - Learn HTML&lt;/title&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;meta name="description" content="HTML tutorial from MindCraft AI"&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+  &lt;style&gt;
+    h1 { color: #0056b3; }
+  &lt;/style&gt;
+  &lt;script src="app.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Welcome to MindCraft AI&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<hr>
+
+<h2>10. Chapter Summary</h2>
+
+<table border="1" cellpadding="8" style="border-collapse: collapse; text-align: left;">
+  <tr>
+    <th>Tag</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><code>&lt;head&gt;</code></td>
+    <td>Container for all metadata.</td>
+  </tr>
+  <tr>
+    <td><code>&lt;title&gt;</code></td>
+    <td>Defines the document title (mandatory).</td>
+  </tr>
+  <tr>
+    <td><code>&lt;style&gt;</code></td>
+    <td>Defines internal CSS rules.</td>
+  </tr>
+  <tr>
+    <td><code>&lt;link&gt;</code></td>
+    <td>Links to external stylesheets or icons.</td>
+  </tr>
+  <tr>
+    <td><code>&lt;meta&gt;</code></td>
+    <td>Defines metadata like description, author, and viewport.</td>
+  </tr>
+  <tr>
+    <td><code>&lt;script&gt;</code></td>
+    <td>Includes client-side JavaScript.</td>
+  </tr>
+  <tr>
+    <td><code>&lt;base&gt;</code></td>
+    <td>Sets the base URL or target for all relative links.</td>
+  </tr>
+</table>
+
+<hr>
+
+<h2>Exercise</h2>
+<p><b>Question:</b> Which of the following should <u>not</u> be placed inside the &lt;head&gt; section?</p>
+
+<ol type="A">
+  <li>&lt;title&gt;</li>
+  <li>&lt;link&gt;</li>
+  <li>&lt;body&gt;</li>
+</ol>

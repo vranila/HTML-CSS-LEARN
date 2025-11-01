@@ -1,0 +1,103 @@
+<h1>HTML Iframes</h1>
+
+<!-- The <iframe> element embeds another web page within the current web page. -->
+
+<p><b>Definition:</b> An HTML <code>&lt;iframe&gt;</code> (inline frame) is used to display a web page inside another web page.</p>
+
+<hr>
+
+<h2>1. HTML Iframe Syntax</h2>
+
+<p>The <code>&lt;iframe&gt;</code> tag specifies an inline frame.</p>
+
+<pre>
+&lt;iframe src="url" title="description"&gt;&lt;/iframe&gt;
+</pre>
+
+<p><b>Tip:</b> Always include the <code>title</code> attribute. It helps screen readers describe the iframe's content for accessibility.</p>
+
+<hr>
+
+<h2>2. Iframe - Set Height and Width</h2>
+
+<p>Use the <code>height</code> and <code>width</code> attributes to define the size of the iframe (default unit is pixels).</p>
+
+<h3>Example 1: Using attributes</h3>
+<iframe src="https://www.example.com" height="200" width="300" title="Iframe Example"></iframe>
+
+<h3>Example 2: Using CSS</h3>
+<iframe src="https://www.example.com" style="height:200px;width:300px;" title="Iframe Example"></iframe>
+
+<hr>
+
+<h2>3. Iframe - Remove or Style the Border</h2>
+
+<p>By default, iframes have a border. You can remove or customize it using CSS.</p>
+
+<h3>Remove Border</h3>
+<iframe src="https://www.example.com" style="border:none;" title="Iframe Example"></iframe>
+
+<h3>Custom Border</h3>
+<iframe src="https://www.example.com" style="border:2px solid red;" title="Iframe Example"></iframe>
+
+<hr>
+
+<h2>4. Iframe - Target for a Link</h2>
+
+<p>An iframe can serve as the target for hyperlinks using the <code>name</code> attribute.</p>
+
+<h3>Example</h3>
+
+<iframe src="https://www.example.com" name="iframe_a" title="Iframe Example" style="height:200px;width:400px;"></iframe>
+
+<p><a href="https://www.w3schools.com" target="iframe_a">Open W3Schools in the iframe above</a></p>
+
+<!-- Clicking the link will load W3Schools inside the iframe -->
+
+<hr>
+
+<h2>5. Summary Table</h2>
+<table border="1" cellpadding="8" style="border-collapse:collapse; text-align:left;">
+  <tr>
+    <th>Attribute / Property</th>
+    <th>Description</th>
+    <th>Example</th>
+  </tr>
+  <tr>
+    <td><code>src</code></td>
+    <td>Specifies the URL of the page to embed</td>
+    <td>&lt;iframe src="page.html"&gt;&lt;/iframe&gt;</td>
+  </tr>
+  <tr>
+    <td><code>title</code></td>
+    <td>Describes the iframe content (for accessibility)</td>
+    <td>&lt;iframe title="Example Iframe"&gt;</td>
+  </tr>
+  <tr>
+    <td><code>height</code> / <code>width</code></td>
+    <td>Defines the iframe's size</td>
+    <td>&lt;iframe height="200" width="300"&gt;</td>
+  </tr>
+  <tr>
+    <td><code>name</code></td>
+    <td>Used to target links to load in the iframe</td>
+    <td>&lt;iframe name="myFrame"&gt;</td>
+  </tr>
+  <tr>
+    <td><code>style="border:none;"</code></td>
+    <td>Removes the iframe border</td>
+    <td>&lt;iframe style="border:none;"&gt;</td>
+  </tr>
+</table>
+
+<hr>
+
+<h2>6. Chapter Summary</h2>
+<ul>
+  <li>The <b>&lt;iframe&gt;</b> tag defines an inline frame.</li>
+  <li><b>src</b> specifies the embedded page URL.</li>
+  <li>Always include a <b>title</b> for accessibility.</li>
+  <li><b>height</b> and <b>width</b> define iframe size.</li>
+  <li>Use <b>border:none;</b> to remove borders.</li>
+  <li><b>name</b> allows targeting links to the iframe.</li>
+</ul>

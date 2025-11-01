@@ -1,0 +1,131 @@
+<h1>HTML - File Paths</h1>
+
+<p>A <b>file path</b> defines the location of a file within a website’s folder structure. File paths are used in HTML to link to external resources such as images, style sheets, and JavaScript files.</p>
+
+<hr>
+
+<h2>1. File Path Examples</h2>
+
+<table border="1" cellpadding="8" style="border-collapse: collapse; text-align: left; width: 100%;">
+  <tr>
+    <th>Path</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><code>&lt;img src="picture.jpg"&gt;</code></td>
+    <td>The file <b>picture.jpg</b> is located in the <b>same folder</b> as the current page.</td>
+  </tr>
+  <tr>
+    <td><code>&lt;img src="images/picture.jpg"&gt;</code></td>
+    <td>The file is in the <b>images</b> subfolder of the current folder.</td>
+  </tr>
+  <tr>
+    <td><code>&lt;img src="/images/picture.jpg"&gt;</code></td>
+    <td>The file is located in the <b>images</b> folder at the <b>root</b> of the website.</td>
+  </tr>
+  <tr>
+    <td><code>&lt;img src="../picture.jpg"&gt;</code></td>
+    <td>The file is located <b>one folder up</b> from the current directory.</td>
+  </tr>
+</table>
+
+<hr>
+
+<h2>2. Understanding File Paths</h2>
+
+<p>File paths define where a file is located relative to the current HTML document or as an absolute web address.</p>
+
+<p>They are used to connect to external resources such as:</p>
+<ul>
+  <li>Web pages (<code>&lt;a href&gt;</code>)</li>
+  <li>Images (<code>&lt;img src&gt;</code>)</li>
+  <li>Style sheets (<code>&lt;link href&gt;</code>)</li>
+  <li>JavaScript files (<code>&lt;script src&gt;</code>)</li>
+</ul>
+
+<hr>
+
+<h2>3. Absolute File Paths</h2>
+
+<p>An <b>absolute file path</b> provides the full URL of the file — including the domain name. This type of path is used when the file is hosted on another server or external website.</p>
+
+<h3>Example:</h3>
+<pre>
+&lt;img src="https://www.w3schools.com/images/picture.jpg" alt="Mountain"&gt;
+</pre>
+
+<p>Here, the image is loaded directly from the full web address.</p>
+
+<hr>
+
+<h2>4. Relative File Paths</h2>
+
+<p>A <b>relative file path</b> locates a file relative to the current HTML file’s location. This is the preferred approach for local and consistent site management.</p>
+
+<h3>Example 1 – Root Folder</h3>
+<pre>
+&lt;img src="/images/picture.jpg" alt="Mountain"&gt;
+</pre>
+<p>The file is in the <code>images</code> folder at the root of the site.</p>
+
+<h3>Example 2 – Current Folder</h3>
+<pre>
+&lt;img src="images/picture.jpg" alt="Mountain"&gt;
+</pre>
+<p>The file is in an <code>images</code> folder within the same directory as the current page.</p>
+
+<h3>Example 3 – One Folder Up</h3>
+<pre>
+&lt;img src="../images/picture.jpg" alt="Mountain"&gt;
+</pre>
+<p>The file is located in the <code>images</code> folder one level above the current directory.</p>
+
+<hr>
+
+<h2>5. Best Practices</h2>
+
+<ul>
+  <li>Use <b>relative paths</b> whenever possible. This ensures flexibility when moving your project between environments (e.g., from localhost to a production server).</li>
+  <li>Avoid using absolute URLs unless the resource is external or hosted on a different domain.</li>
+  <li>Keep your folder structure organized (e.g., <code>images/</code>, <code>css/</code>, <code>js/</code>).</li>
+  <li>Test links locally before deployment to ensure file references are correct.</li>
+</ul>
+
+<hr>
+
+<h2>6. Chapter Summary</h2>
+
+<table border="1" cellpadding="8" style="border-collapse: collapse; text-align: left; width: 100%;">
+  <tr>
+    <th>Path Type</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><b>Absolute Path</b></td>
+    <td>Specifies the full URL, including the protocol and domain.</td>
+  </tr>
+  <tr>
+    <td><b>Relative Path</b></td>
+    <td>Specifies the file location relative to the current document’s folder.</td>
+  </tr>
+  <tr>
+    <td><b>Root-relative Path</b></td>
+    <td>Starts from the website’s root directory (begins with <code>/</code>).</td>
+  </tr>
+  <tr>
+    <td><b>Parent-relative Path</b></td>
+    <td>Moves up one level using <code>../</code>.</td>
+  </tr>
+</table>
+
+<hr>
+
+<h2>Exercise</h2>
+
+<p><b>Question:</b> Which of the following file paths refers to a file in the folder one level above the current folder?</p>
+
+<ol type="A">
+  <li><code>images/picture.jpg</code></li>
+  <li><code>/images/picture.jpg</code></li>
+  <li><code>../images/picture.jpg</code></li>
+</ol>
